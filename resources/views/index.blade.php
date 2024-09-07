@@ -2,17 +2,27 @@
 
 @section('content')
     {{-- First Section --}}
-    <div class="min-h-svh text-center flex flex-col justify-center items-center bg-center"
-        style="background-image: url('/img/demabg.png'); background-size: cover; background-repeat: no-repeat">
+    <div class="min-h-svh bg-center flex justify-center items-end"
+        style="background-image: url('/img/unidabg.jpg'); background-size: cover; background-repeat: no-repeat">
         {{-- <div class="mx-auto">
             <img class="w-96 mt-8" src="/img/logodema.png" alt="">
         </div> --}}
-        <span class="mt-6 text-[#16aebc] uppercase text-base">Website Resmi</span>
-        <hr class="border-1 border-[#16aebc] w-2/12 mx-auto">
-        <h1 class="mt-2 text-[#16aebc] font-trajanBold font-bold uppercase text-5xl">DEMA Unida Gontor</h1>
-        <h2 class="mt-2 text-[#16aebc] font-trajan font-semibold uppercase text-lg">Kabinet Hadisatya 2024-2025</h3>
+        <div class="text-center flex flex-col justify-center items-center text-secondary p-8 rounded-tl-xl rounded-tr-xl shadow-lg"
+            style="background: linear-gradient(115deg, rgba(0, 104, 174, 0.93) 3.21%, rgba(0, 17, 28, 0.93) 64.41%);">
+            <div class="flex my-4">
+                <img class="w-52" src="/img/logodema.png" alt="">
+            </div>
+            {{-- <span class="mt-6 uppercase text-sm">Website Resmi</span> --}}
+            <h1 class="mt-6 font-montserrat font-[800] uppercase text-5xl tracking-widest">Dewan <br>Mahasiswa</h1>
+        </div>
     </div>
-    {{-- Second Section --}}
+    {{-- Kabinet Section --}}
+    <div class="kabinet-section bg-secondary">
+        <div class="kabinet flex max-w-7xl mx-auto px-12 py-16 text-center justify-center">
+            <h1 class="font-montaga text-5xl font-bold drop-shadow-lg text-primary">KABINET HADISATYA</h1>
+        </div>
+    </div>
+    {{-- Tentang Dema Section --}}
     <div class="about-section bg-gray-800">
         <div class="about flex max-w-7xl mx-auto px-12 py-16 text-white">
             <div class="logo-about w-full flex items-center justify-center px-10">
@@ -67,7 +77,7 @@
             <div class="artikel-box">
                 {{-- card artikel --}}
                 <div class="card-artikel">
-                    
+
                 </div>
             </div>
         </div>

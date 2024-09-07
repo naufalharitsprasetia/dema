@@ -8,7 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#16aebc",
+        primary: "#04364A",
+        secondary: "#BBE1FA",
+        third: "#3282B8",
+        fourth: "#0365A8",
+        fifth: "#01131E",
       },
       fontFamily: {
         arabic: ["arabic-lpmq"],
@@ -16,6 +20,8 @@ export default {
         trajan: ["trajan"],
         trajanBold: ["trajan-bold"],
         poppins: ["Poppins"],
+        montserrat: ["Montserrat"],
+        montaga: ["Montaga"],
       },
     },
   },

@@ -1,24 +1,24 @@
-<nav class="z-50 w-full fixed bg-gray-800">
+<nav class="z-50 w-full fixed bg-primary">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex flex-shrink-0 items-center">
                     <img class="h-8 w-auto" src="/img/logodema.png" alt="Your Company">
-                    <h2 class="mx-4 text-white">DEMA UNIDA GONTOR</h2>
+                    <h2 class="mx-4 text-secondary font-poppins font-semibold text-lg">DEMA UNIDA GONTOR</h2>
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-slate-300 text-gray-800' : 'text-gray-100 hover:bg-slate-300 hover:text-gray-800' }} ">Beranda</a>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }} ">Beranda</a>
                         <a href="/tema"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'tema' ? 'bg-slate-300 text-gray-800' : 'text-gray-100 hover:bg-slate-300 hover:text-gray-800' }}">Departement</a>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'tema' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
                         <a href="/about"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-slate-300 text-gray-800' : 'text-gray-100 hover:bg-slate-300 hover:text-gray-800' }}">UKM</a>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">UKM</a>
                         <a href="/about"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-slate-300 text-gray-800' : 'text-gray-100 hover:bg-slate-300 hover:text-gray-800' }}">PRESS
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
                             RELEASE</a>
                         <a href="/contact"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'contact' ? 'bg-slate-300 text-gray-800' : 'text-gray-100 hover:bg-slate-300 hover:text-gray-800' }}">Lainnya</a>
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'contact' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Lainnya</a>
                     </div>
                 </div>
                 <!-- SMALL NAV-->
