@@ -23,13 +23,13 @@
         </div>
     </div>
     {{-- Tentang Dema Section --}}
-    <div class="about-section bg-gray-800">
-        <div class="about flex max-w-7xl mx-auto px-12 py-16 text-white">
-            <div class="logo-about w-full flex items-center justify-center px-10">
-                <img class="" src="/img/logodema.png" alt="">
+    <div class="about-section bg-primary">
+        <div class="about flex max-w-7xl mx-auto px-12 py-16 text-secondary">
+            <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
+                <img class="w-[150rem]" src="/img/logodema.png" alt="">
             </div>
             <div class="text-about">
-                <h2 class="font-semibold text-3xl">Tentang DEMA</h2>
+                <h2 class="font-bold text-[50px] text-center mb-8">Tentang DEMA</h2>
                 <p class="text-base font-normal">Dewan Mahasiswa (DEMA) adalah sebuah organisasi dari, oleh, dan untuk
                     mahasiswa. dewan mahasiswa juga merupakan organisasi tertinggi di universitas darussalam gontor yang
                     membantu rektor menaungi seluruh aspek kehidupan mahasiswa.</p>
@@ -44,21 +44,25 @@
         </div>
     </div>
     {{-- Third Section --}}
-    <div class="visimisi-section">
+    <div class="visimisi-section bg-secondary text-primary">
         <div class="visimisi flex mx-auto max-w-7xl px-12 py-16">
             <div class="visi px-8">
-                <h2 class="font-semibold text-3xl">Visi</h2>
-                <p>Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang berperan inspiratif,
+                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
+                </h2>
+                <p class="text-[24px]">Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang
+                    berperan inspiratif,
                     inklusif, dan inovatif dalam membangun karakter, kompetensi, dan kontribusi mahasiswa, guna menciptakan
                     generasi pemimpin yang berintegritas, berwawasan luas, dan berkomitmen pada nilai-nilai Islami.</p>
             </div>
             <div class="misi px-8">
-                <h2 class="font-semibold text-3xl">Misi</h2>
-                <ul>
+                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
+                </h2>
+                <ul class="text-[24px]">
                     <li>- Membangun lingkungan yang kondusif bagi seluruh mahasiswa untuk mengembangkan potensi secara
                         optimal, baik dalam aspek intelektual, spiritual, maupun sosial, sehingga dapat menjadi pemimpin
                         yang inspiratif dan membawa perubahan positif bagi lingkungan.
                     </li>
+                    <br>
                     <li>- Membangun mahasiswa Universitas Darussalam Gontor sebagai individu yang unggul dan berdaya saing
                         melalui pengembangan jejaring antar kampus, baik di tingkat nasional maupun internasional, sebagai
                         dukungan terhadap misi internasionalisasi kampus pada tingkat (world-class university) dan
@@ -68,16 +72,61 @@
             </div>
         </div>
     </div>
-    {{-- Fourth Section --}}
-    <div class="artikel-section bg-gray-200">
-        <div class="artikel max-w-7xl px-12 py-16 mx-auto">
-            <div class="heading-artikel text-center">
-                <h2 class="font-semibold text-3xl">PRESS RELEASE</h2>
+    {{-- Count Section --}}
+    <div class="count-section bg-third text-white">
+        <div class="count flex gap-12 max-w-7xl px-12 py-16 mx-auto justify-between items-center">
+            <div class="count-card text-center">
+                <h2 class="font-bold text-5xl">64</h2>
+                <span class="font-bold text-xl">Pengurus</span>
             </div>
-            <div class="artikel-box">
+            <div class="count-card text-center">
+                <h2 class="font-bold text-5xl">11</h2>
+                <span class="font-bold text-xl">Departemen</span>
+            </div>
+            <div class="count-card text-center">
+                <h2 class="font-bold text-5xl">13</h2>
+                <span class="font-bold text-xl">UKM</span>
+            </div>
+            <div class="count-card text-center">
+                <h2 class="font-bold text-5xl">17</h2>
+                <span class="font-bold text-xl">Himpunan</span>
+            </div>
+            <div class="count-card text-center">
+                <h2 class="font-bold text-5xl">1300</h2>
+                <span class="font-bold text-xl">Mahasiswa</span>
+            </div>
+        </div>
+    </div>
+    {{-- Fourth Section --}}
+    <div class="artikel-section bg-primary text-secondary">
+        <div class="artikel flex max-w-7xl px-12 py-16 mx-auto">
+            <div class="heading-artikel pr-10 mr-8">
+                <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
+                <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="">
+                <h3 class="font-bold text-3xl">Gebyar Kemerdekaan 2024</h3>
+                <br>
+                <a href="#" class="text-white font-semibold text-xl">Selengkapnya >></a>
+            </div>
+            <div class="kanan-artikel w-full flex flex-wrap gap-8 pl-8 border-l-4 border-secondary">
                 {{-- card artikel --}}
-                <div class="card-artikel">
-
+                <div class="card-artikel text-center">
+                    <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="">
+                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
+                </div>
+                {{-- card artikel --}}
+                <div class="card-artikel text-center">
+                    <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="">
+                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
+                </div>
+                {{-- card artikel --}}
+                <div class="card-artikel text-center">
+                    <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="">
+                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
+                </div>
+                {{-- card artikel --}}
+                <div class="card-artikel text-center">
+                    <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="">
+                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
                 </div>
             </div>
         </div>
