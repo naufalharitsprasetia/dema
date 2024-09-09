@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    {{-- First Section --}}
+    {{-- Hero Section --}}
     <div class="min-h-svh bg-center flex justify-center items-end"
         style="background-image: url('/img/unidabg.jpg'); background-size: cover; background-repeat: no-repeat">
         {{-- <div class="mx-auto">
@@ -17,9 +17,14 @@
         </div>
     </div>
     {{-- Kabinet Section --}}
-    <div class="kabinet-section bg-secondary">
-        <div class="kabinet flex max-w-7xl mx-auto px-12 py-16 text-center justify-center">
-            <h1 class="font-montaga text-5xl font-bold drop-shadow-lg text-primary">KABINET HADISATYA</h1>
+    <div class="kabinet-section bg-secondary bg-cover" style="background-image: url('/img/tulisanhadisatya.png')">
+        <div class="kabinet flex flex-col max-w-7xl mx-auto pt-16 text-center justify-center">
+            <div class="">
+                <h1 class="font-montaga text-5xl font-bold drop-shadow-lg text-primary">KABINET HADISATYA</h1>
+            </div>
+        </div>
+        <div class="mx-auto">
+            <img class="mx-auto" src="/img/fotokita.png" alt="">
         </div>
     </div>
     {{-- Tentang Dema Section --}}
@@ -97,37 +102,61 @@
             </div>
         </div>
     </div>
-    {{-- Fourth Section --}}
+    {{-- Artikel Section --}}
     <div class="artikel-section bg-primary text-secondary">
-        <div class="artikel flex max-w-7xl px-12 py-16 mx-auto">
+        <div class="artikel flex max-w-7xl px-12 pt-16 mx-auto">
             <div class="heading-artikel pr-10 mr-8">
                 <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
                 <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="">
                 <h3 class="font-bold text-3xl">Gebyar Kemerdekaan 2024</h3>
                 <br>
-                <a href="#" class="text-white font-semibold text-xl">Selengkapnya >></a>
+                <a href="#" class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
             </div>
-            <div class="kanan-artikel w-full flex flex-wrap gap-8 pl-8 border-l-4 border-secondary">
+            <div class="kanan-artikel w-full flex flex-wrap pl-8 border-l-4 border-secondary">
                 {{-- card artikel --}}
-                <div class="card-artikel text-center">
-                    <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="">
-                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
-                </div>
+                <a class="hover:bg-third/80 rounded-lg p-2" href="">
+                    <div class="card-artikel text-center">
+                        <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="">
+                        <span class="font-semibold text-xl mt-3">LDK Dema Hadisatya</span>
+                    </div>
+                </a>
                 {{-- card artikel --}}
-                <div class="card-artikel text-center">
-                    <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="">
-                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
-                </div>
+                <a class="hover:bg-third/80 rounded-lg p-2" href="">
+                    <div class="card-artikel text-center">
+                        <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="">
+                        <span class="font-semibold text-xl mt-3">Internal Cup 2024</span>
+                    </div>
+                </a>
                 {{-- card artikel --}}
-                <div class="card-artikel text-center">
-                    <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="">
-                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
-                </div>
+                <a class="hover:bg-third/80 rounded-lg p-2" href="">
+                    <div class="card-artikel text-center">
+                        <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="">
+                        <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
+                    </div>
+                </a>
                 {{-- card artikel --}}
-                <div class="card-artikel text-center">
-                    <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="">
-                    <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
-                </div>
+                <a class="hover:bg-third/80 rounded-lg p-2" href="">
+                    <div class="card-artikel text-center">
+                        <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="">
+                        <span class="font-semibold text-xl mt-3">Peringatan 17 Agustus Ke-79</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="flex max-w-7xl px-12 justify-center align-center pt-8 pb-16 mx-auto">
+            <a href="" class="bg-sixth text-white px-2 py-2 rounded-md hover:opacity-85">Artikel Lainnya</a>
+        </div>
+    </div>
+    {{-- Video Profil Section  --}}
+    <div class="video-section bg-secondary bg-cover" style="background-image: url('/img/videocorak.png')">
+        <div class="artikel max-w-7xl px-12 pt-12 mx-auto">
+            <div class="mx-auto text-center">
+                <h2 class="text-primary text-5xl font-bold">Video Profil</h2>
+            </div>
+            <div class="relative w-full pt-[66%] bg-no-repeat bg-center bg-cover" style="background-image: url();">
+                <iframe title="youtubeVt " class="absolute top-[14.7%] left-[8%] w-[84.3%] h-[67%] border-none"
+                    src="https://www.youtube.com/embed/qkUEztoUfmI?si=5mRRrZc3PEuxzdOo"
+                    allow="accelerometer; clipboard-write; encrypted-media;" loading="lazy"></iframe>
             </div>
         </div>
     </div>

@@ -13,6 +13,7 @@ export default {
         third: "#3282B8",
         fourth: "#0365A8",
         fifth: "#01131E",
+        sixth: "#FF6614",
       },
       fontFamily: {
         arabic: ["arabic-lpmq"],

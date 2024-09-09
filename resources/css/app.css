@@ -39,8 +39,8 @@ body {
   font-size: 20px;
   border: none;
   outline: none;
-  @apply bg-cyan-800;
-  color: black;
+  @apply bg-third;
+  color: white;
   cursor: pointer;
   height: 50px;
   width: 50px;

@@ -10,15 +10,13 @@
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }} ">Beranda</a>
-                        <a href="/tema"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'tema' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
-                        <a href="/about"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">UKM</a>
-                        <a href="/about"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'about' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
+                        <a href="/departemen"
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'departemen' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
+                        <a href="/ukm"
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'ukm' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">UKM</a>
+                        <a href="/artikel"
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'artikel' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
                             RELEASE</a>
-                        <a href="/contact"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'contact' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Lainnya</a>
                     </div>
                 </div>
                 <!-- SMALL NAV-->
@@ -51,22 +49,28 @@
                 <div class="relative ml-3">
                     <div>
                         <button type="button"
-                            class="relative flex max-w-xs items-center rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                            class="relative flex max-w-xs items-center rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-third hover:text-white group"
                             aria-expanded="false" aria-haspopup="true">
                             <span class="absolute -inset-1.5" id="user-menu-button"></span>
                             <span class="sr-only">Open user menu</span>
-                            <span class="text-gray-300 mr-2 font-semibold">Welcome Back, Nama
-                                !</span>
-                            <img class="h-8 w-8 rounded-full" src="/img/profile.jpg" alt="">
+                            <span class="text-secondary font-semibold px-3 py-2 group-hover:text-white">Lainnya</span>
                         </button>
                     </div>
-                    <!-- Dropdown menu -->
+                    <!-- Dropdown menu *(lainnya) -->
                     <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                        <a href="/dashboard "
-                            class="text-center block px-4 py-2 text-sm   {{ $active == 'dashboard' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}"
-                            role="menuitem" tabindex="-1" id="user-menu-item-1"><i
+                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
+                        {{-- lainnya --}}
+                        <a href="/about"
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'about' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Tentang
+                            Kami</a>
+                        <a href="/contact"
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'contact' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Kontak</a>
+                        {{-- Admin --}}
+                        <hr class="border-2 border-primary">
+                        <a href=""
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'dashboard' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}"><i
                                 class="fa-solid fa-table-columns"></i> Dashboard Admin</a>
+                        {{-- Logout --}}
                         <form action="/logout" method="POST" id="logout-form">
                             @csrf
                             <button type="button" onclick="confirmLogout()"
@@ -87,47 +91,40 @@
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/"
-                class="block rounded-md px-3 py-2 text-base font-medium  {{ $active == 'beranda' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                    class="fa-solid fa-house"></i> Beranda</a>
+                class="block rounded-md px-3 py-2 text-base font-medium  {{ $active == 'beranda' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Beranda</a>
             <a href="/tema"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'tema' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                    class="fa-solid fa-tags"></i> Tema Sains</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'tema' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">UKM</a>
             <a href="/ayat"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'ayat' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                    class="fa-solid fa-book"></i> Ayat Sains</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'ayat' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Departemen</a>
             <a href="/contact"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'contact' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                    class="fa-solid fa-circle-info"></i> Kontak</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'contact' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Artikel</a>
             <a href="/about"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                    class="fa-solid fa-id-card"></i> Tentang Kami</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Halaman
+                Lainnya</a>
         </div>
-        @auth
-            <div class="border-t border-gray-700 pb-3 pt-4">
-                <div class="flex items-center px-5">
-                    <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="/img/avatar.jpg" alt="">
-                    </div>
-                    <div class="ml-3">
-                        <div class="text-base font-medium leading-none text-gray-500">Nama</div>
-                        <div class="text-sm font-medium leading-none text-gray-500">Email</div>
-                    </div>
-
+        <div class="border-t border-gray-700 pb-3 pt-4">
+            <div class="flex items-center px-5">
+                <div class="flex-shrink-0">
+                    <img class="h-10 w-10 rounded-full" src="/img/avatar.jpg" alt="">
                 </div>
-                <div class="mt-3 space-y-1 px-2">
-                    <a href="/dashboard"
-                        class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'dashboard' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                            class="fa-solid fa-table-columns"></i> Dashboard
-                        Admin</a>
-                    <form action="/logout" method="POST" id="logout-form">
-                        @csrf
-                        <button type="button" onclick="confirmLogout()"
-                            class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-700 hover:text-white"
-                            role="menuitem" tabindex="-1" id="user-menu-item-2"><i
-                                class="fa-solid fa-right-from-bracket"></i> Sign out</button>
-                    </form>
+                <div class="ml-3">
+                    <div class="text-base font-medium leading-none text-gray-500">Nama</div>
+                    <div class="text-sm font-medium leading-none text-gray-500">Email</div>
                 </div>
             </div>
-        @endauth
+            <div class="mt-3 space-y-1 px-2">
+                <a href="/dashboard"
+                    class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'dashboard' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
+                        class="fa-solid fa-table-columns"></i> Dashboard
+                    Admin</a>
+                <form action="/logout" method="POST" id="logout-form">
+                    @csrf
+                    <button type="button" onclick="confirmLogout()"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-700 hover:text-white"
+                        role="menuitem" tabindex="-1" id="user-menu-item-2"><i
+                            class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+                </form>
+            </div>
+        </div>
     </div>
 </nav>

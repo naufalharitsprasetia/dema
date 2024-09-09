@@ -8,7 +8,7 @@
 @endif
 @yield('content')
 <button onclick="topFunction()" id="myBtnTop" title="Go to top" style="display: block">
-    <i class="fa-solid fa-arrow-up fa-flip fa-xl" style="color: #1f303b;"></i>
+    <i class="fa-solid fa-arrow-up fa-flip fa-xl" style="color: white;"></i>
 </button>
 </main>
 @include('layout.footer')

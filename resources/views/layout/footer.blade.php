@@ -1,30 +1,49 @@
 {{-- Footer --}}
 <!-- Footer Section -->
-<footer class="bg-slate-800 text-white p-6 ">
+<footer class="bg-primary text-secondary p-6 ">
     <div
-        class="container mx-auto flex flex-wrap md:flex-nowrap justify-between items-center max-w-7xl px-4 sm:px-6 lg:px-8">
+        class="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-wrap md:flex-nowrap justify-evenly items-center">
         <!-- Left Section: Logo and Details -->
         <div class="flex items-center space-x-4">
-            <img src="/img/logodema.png" alt="Logo" class="h-12 w-12">
+            <img src="/img/logodema.png" alt="Logo" class="w-16">
             <div>
                 <p class="font-bold">DEMA UNIDA GONTOR</p>
-                <p class="text-sm">Dewan Mahasiswa Universitas Darussalam Gontor</p>
+                <p class="font-bold">KABINET HADISATYA</p>
                 </p>
             </div>
         </div>
+        <!-- Mid Section: Navigation Links -->
+        <div class="mid-footer flex flex-col">
+            <h4 class="font-semibold text-lg my-4">Follow Us on Social Media</h4>
+            <div class="flex mx-auto gap-4">
+                <a href="">
+                    <img class="w-8" src="/img/instagram.png" alt="">
+                </a>
+                <a href="">
+                    <img class="w-8" src="/img/youtube.png" alt="">
+                </a>
+                <a href="">
+                    <img class="w-8" src="/img/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
         <!-- Right Section: Navigation Links -->
-        <div class="grid justify-center items-center mx-auto md:w-auto grid-cols-2 md:grid-cols-4 gap-4 md:h-full mt-4 ">
-            <div class="logo-support p-2 rounded-md justify-self-center">
-                <h4>Home</h4>
+        <div class="right-footer flex flex-col">
+            <div class="alamat-unida">
+                <h4 class="font-semibold text-lg">Universitas Darussalam Gontor</h4>
+                <p class="text-sm">Jl. Raya Siman, Dusun I, Demangan, Kec. Siman,<br> Kabupaten Ponorogo, Jawa Timur
+                    63471
+                </p>
             </div>
-            <div class="logo-support p-2 rounded-md justify-self-center">
-                <h4>About</h4>
-            </div>
-            <div class="logo-support p-2 rounded-md justify-self-center">
-                <h4>Contact</h4>
-            </div>
-            <div class="logo-support p-2 rounded-md justify-self-center">
-                <h4>Faq</h4>
+            <div class="flex mt-4 gap-8">
+                <div class="email">
+                    <h4 class="text-base font-semibold">Email</h4>
+                    <p class="text-sm">demasiman@unida.gontor.ac.id</p>
+                </div>
+                <div class="narahubung">
+                    <h4 class="text-base font-semibold">Narahubung</h4>
+                    <p class="text-sm">+62-979-5749-5743</p>
+                </div>
             </div>
         </div>
     </div>
