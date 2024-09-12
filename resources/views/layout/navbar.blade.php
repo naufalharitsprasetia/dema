@@ -10,12 +10,12 @@
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }} ">Beranda</a>
-                        <a href="/departemen"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'departemen' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
+                        <a href="/departement"
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'departement' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
                         <a href="/ukm"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'ukm' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">UKM</a>
-                        <a href="/artikel"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'artikel' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
+                        <a href="/blog"
+                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'blog' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
                             RELEASE</a>
                     </div>
                 </div>
@@ -65,6 +65,8 @@
                             Kami</a>
                         <a href="/contact"
                             class="text-center block px-4 py-2 text-sm {{ $active == 'contact' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Kontak</a>
+                        <a href="/faq"
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'faq' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Faq</a>
                         {{-- Admin --}}
                         <hr class="border-2 border-primary">
                         <a href=""

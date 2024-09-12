@@ -24,4 +24,9 @@ class HomeController extends Controller
         $active = 'contact';
         return view('home.contact',  compact('active'));
     }
+    public function faq()
+    {
+        $active = 'faq';
+        return view('home.faq',  compact('active'));
+    }
 }
