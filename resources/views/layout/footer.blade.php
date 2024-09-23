@@ -57,6 +57,7 @@
     AOS.init();
 </script>
 {{-- Scripts --}}
+@vite('resources/js/app.js')
 <script src="/js/script.js"></script>
 </body>
 

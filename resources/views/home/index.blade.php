@@ -48,7 +48,7 @@
             </div>
         </div>
     </div>
-    {{-- Third Section --}}
+    {{-- Visi Misi Section --}}
     <div class="visimisi-section bg-secondary text-primary">
         <div class="visimisi flex mx-auto max-w-7xl px-12 py-16">
             <div class="visi px-8">

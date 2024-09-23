@@ -54,7 +54,7 @@
     {{-- AOS --}}
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     {{-- Style CSS --}}
-    <link href="/css/style.css" rel="stylesheet">
+    @vite('resources/css/app.css')
     <link rel="icon" href="/img/logodema.png" type="image/png">
     <title>DEMA | DEWAN MAHASISWA UNIDA GONTOR</title>
 </head>

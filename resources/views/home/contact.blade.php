@@ -28,7 +28,7 @@
                 <h2 class="text-4xl font-bold mb-4">Kirim Sebuah Surat</h2>
                 <p class="text-xl">Anda bisa mengirim surat atau pesan dari sini.</p>
                 {{-- Form --}}
-                <form action="" class="flex flex-col">
+                <form action="" class="flex flex-col" id="contact-form">
                     <div class="input-group flex">
                         <div class="flex flex-col input-div w-full">
                             <label for="nama" class="font-semibold">Nama</label>
@@ -48,10 +48,32 @@
                         <textarea class="p-2 border-2 border-primary bg-secondary rounded-md" name="pesan" id="pesan" cols="30"
                             rows="10" placeholder="Pesan yang ingin disampaikan"></textarea>
                     </div>
-                    <button type="button" class="text-white bg-sixth px-4 py-2 font-semibold text-xl mt-4 rounded-lg">Kirim
+                    <button type="submit" class="text-white bg-sixth px-4 py-2 font-semibold text-xl mt-4 rounded-lg">Kirim
                         Pesan</button>
                 </form>
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('pesan').value;
+
+            // Construct the WhatsApp message
+            const whatsappMessage =
+                `New contact from website Dema Unida Gontor: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+            // Replace 'YOUR_PHONE_NUMBER' with your actual WhatsApp business number
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=081220594202&text=${whatsappMessage}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // You can also submit the form to your backend here if needed
+            // this.submit();
+        });
+    </script>
 @endsection
