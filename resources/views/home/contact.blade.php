@@ -3,28 +3,28 @@
 @section('content')
     {{-- contact Us --}}
     <div class="contact-section bg-secondary text-primary">
-        <div class="contact max-w-7xl mx-auto py-16 px-14 flex">
+        <div class="contact max-w-7xl mx-auto py-16 px-14 flex flex-col md:flex-row">
             <div class="kiri-contact w-full">
                 <h2 class="text-4xl font-bold mb-4">Kontak Kami</h2>
                 <p class="text-xl">Daftar Kontak Yang Bisa di Hubungi : </p>
                 <div class="flex flex-col mt-8">
-                    <div class="flex py-6 px-2 items-center">
+                    <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal py-6 px-2 items-center">
                         <img class="w-14 p-2 mr-4 bg-primary rounded-full" src="/img/gmaps.png" alt="">
                         <p class="font-medium text-lg">Jl. Raya Siman, Dusun I, Demangan,
                             Kec. Siman, Kabupaten Ponorogo,
                             Jawa Timur 63471</p>
                     </div>
-                    <div class="flex py-6 px-2 items-center">
+                    <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal py-6 px-2 items-center">
                         <img class="w-14 p-2 mr-4 bg-primary rounded-full" src="/img/gmail.png" alt="">
                         <p class="font-medium text-lg">demasiman@unida.gontor.ac.id</p>
                     </div>
-                    <div class="flex py-6 px-2 items-center">
+                    <div class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal py-6 px-2 items-center">
                         <img class="w-14 p-2 mr-4 bg-primary rounded-full" src="/img/telepon.png" alt="">
                         <p class="font-medium text-lg">+62 123 4567 8900</p>
                     </div>
                 </div>
             </div>
-            <div class="kanan-contact w-full">
+            <div class="mt-8 md:mt-0 kanan-contact w-full">
                 <h2 class="text-4xl font-bold mb-4">Kirim Sebuah Surat</h2>
                 <p class="text-xl">Anda bisa mengirim surat atau pesan dari sini.</p>
                 {{-- Form --}}

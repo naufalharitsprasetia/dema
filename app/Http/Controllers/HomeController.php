@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,5 +29,11 @@ class HomeController extends Controller
     {
         $active = 'faq';
         return view('home.faq',  compact('active'));
+    }
+    public function dashboard()
+    {
+        $active = "dashboard";
+        $blogs = Blog::all(); // where User id == auth()
+        return view('admin.dashboard', compact('active', 'blogs'));
     }
 }

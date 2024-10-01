@@ -29,7 +29,7 @@
     </div>
     {{-- Tentang Dema Section --}}
     <div class="about-section bg-primary">
-        <div class="about flex max-w-7xl mx-auto px-12 py-16 text-secondary">
+        <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16 text-secondary">
             <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
                 <img class="w-[150rem]" src="/img/logodema.png" alt="">
             </div>
@@ -50,7 +50,7 @@
     </div>
     {{-- Visi Misi Section --}}
     <div class="visimisi-section bg-secondary text-primary">
-        <div class="visimisi flex mx-auto max-w-7xl px-12 py-16">
+        <div class="visimisi flex flex-wrap md:flex-nowrap mx-auto max-w-7xl px-12 py-16">
             <div class="visi px-8">
                 <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
                 </h2>
@@ -59,7 +59,7 @@
                     inklusif, dan inovatif dalam membangun karakter, kompetensi, dan kontribusi mahasiswa, guna menciptakan
                     generasi pemimpin yang berintegritas, berwawasan luas, dan berkomitmen pada nilai-nilai Islami.</p>
             </div>
-            <div class="misi px-8">
+            <div class="misi mt-4 md:mt-0 px-8">
                 <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
                 </h2>
                 <ul class="text-[24px]">
@@ -79,7 +79,8 @@
     </div>
     {{-- Count Section --}}
     <div class="count-section bg-third text-white">
-        <div class="count flex gap-12 max-w-7xl px-12 py-16 mx-auto justify-between items-center">
+        <div
+            class="count flex flex-wrap md:flex-nowrap gap-12 max-w-7xl px-12 py-16 mx-auto justify-center md:justify-between items-center">
             <div class="count-card text-center">
                 <h2 class="font-bold text-5xl">64</h2>
                 <span class="font-bold text-xl">Pengurus</span>
@@ -104,7 +105,7 @@
     </div>
     {{-- Artikel Section --}}
     <div class="artikel-section bg-primary text-secondary">
-        <div class="artikel flex max-w-7xl px-12 pt-16 mx-auto">
+        <div class="artikel flex flex-col md:flex-row max-w-7xl px-12 pt-16 mx-auto">
             <div class="heading-artikel pr-10 mr-8">
                 <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
                 <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="">
@@ -112,7 +113,7 @@
                 <br>
                 <a href="#" class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
             </div>
-            <div class="kanan-artikel w-full flex flex-wrap pl-8 border-l-4 border-secondary">
+            <div class="mt-6 md:mt-0 kanan-artikel w-full flex flex-wrap pl-8 border-l-4 border-secondary">
                 {{-- card artikel --}}
                 <a class="hover:bg-third/80 rounded-lg p-2" href="">
                     <div class="card-artikel text-center">

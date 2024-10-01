@@ -12,7 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('judul');
+            $table->text('isi');
+            $table->string('image');
+            $table->string('image2')->nullable();
+            $table->string('image3')->nullable();
+            $table->string('image4')->nullable();
+            $table->string('image5')->nullable();
+            $table->string('link_dokumentasi')->nullable();
             $table->timestamps();
         });
     }

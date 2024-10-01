@@ -1,1 +1,3 @@
-import './bootstrap';
+/** @format */
+
+import "./bootstrap";

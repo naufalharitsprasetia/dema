@@ -28,7 +28,7 @@
             </div>
         </div>
         <!-- Right Section: Navigation Links -->
-        <div class="right-footer flex flex-col">
+        <div class="mt-8 md:mt-0 right-footer flex flex-col">
             <div class="alamat-unida">
                 <h4 class="font-semibold text-lg">Universitas Darussalam Gontor</h4>
                 <p class="text-sm">Jl. Raya Siman, Dusun I, Demangan, Kec. Siman,<br> Kabupaten Ponorogo, Jawa Timur
@@ -48,6 +48,7 @@
         </div>
     </div>
 </footer>
+@vite('resources/js/app.js')
 {{-- Javascript --}}
 @stack('scripts') <!-- Stack untuk scripts di akhir body -->
 {{-- @push('scripts') --}}
@@ -57,7 +58,6 @@
     AOS.init();
 </script>
 {{-- Scripts --}}
-@vite('resources/js/app.js')
 <script src="/js/script.js"></script>
 </body>
 

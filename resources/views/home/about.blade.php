@@ -8,7 +8,7 @@
     </div>
     {{-- Tentang Dema Section --}}
     <div class="about-section bg-primary">
-        <div class="about flex max-w-7xl mx-auto px-12 py-16 text-secondary">
+        <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16 text-secondary">
             <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
                 <img class="w-[150rem]" src="/img/logodema.png" alt="">
             </div>
@@ -27,9 +27,9 @@
             </div>
         </div>
     </div>
-    {{-- Visi Misi Dema Section --}}
+    {{-- Visi Misi Section --}}
     <div class="visimisi-section bg-secondary text-primary">
-        <div class="visimisi flex mx-auto max-w-7xl px-12 py-16">
+        <div class="visimisi flex flex-wrap md:flex-nowrap mx-auto max-w-7xl px-12 py-16">
             <div class="visi px-8">
                 <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
                 </h2>
@@ -38,7 +38,7 @@
                     inklusif, dan inovatif dalam membangun karakter, kompetensi, dan kontribusi mahasiswa, guna menciptakan
                     generasi pemimpin yang berintegritas, berwawasan luas, dan berkomitmen pada nilai-nilai Islami.</p>
             </div>
-            <div class="misi px-8">
+            <div class="misi mt-4 md:mt-0 px-8">
                 <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
                 </h2>
                 <ul class="text-[24px]">
@@ -54,6 +54,14 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </div>
+    {{-- Struktur Dema Section --}}
+    <div class="struktur-section bg-third text-white">
+        <div class="struktur mx-auto text-center mx-auto max-w-7xl px-12 py-16">
+            <h1 class="text-5xl font-bold text-center">Struktur</h1>
+            <br>
+            <img src="/img/strukturdema.png" alt="">
         </div>
     </div>
 @endsection

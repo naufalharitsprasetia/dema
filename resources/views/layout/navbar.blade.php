@@ -1,14 +1,14 @@
 <nav class="z-50 w-full fixed bg-primary">
-    <div class="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-2 lg:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-            <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+            <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
                 <div class="absolute z-[999] top-0 left-4 ">
                     <img class="h-[6rem] w-auto" src="/img/logodemanavbar.png" alt="Your Company">
                 </div>
                 <div class="flex flex-shrink-0 items-center ml-28">
                     <h2 class="mx-4 text-secondary font-poppins font-semibold text-lg">DEMA UNIDA GONTOR</h2>
                 </div>
-                <div class="hidden md:ml-6 md:block">
+                <div class="hidden lg:ml-6 lg:block">
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
                             class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }} ">Beranda</a>
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <!-- SMALL NAV-->
-                <div class="-mr-2 flex md:hidden justify-end">
+                <div class="-mr-2 flex lg:hidden justify-end">
                     <!-- Mobile menu button -->
                     <button type="button"
                         class="relative inline-flex items-center justify-center my-3 rounded-md bg-slate-100 p-2 text-gray-800 hover:bg-slate-200 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -46,7 +46,7 @@
                 </div>
             </div>
             {{--  --}}
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
                 <!-- Profile dropdown Button -->
                 <div class="relative ml-3">
                     <div>
@@ -72,7 +72,7 @@
                         {{-- Admin --}}
                         @auth
                             <hr class="border-2 border-primary">
-                            <a href=""
+                            <a href="/dashboard"
                                 class="text-center block px-4 py-2 text-sm {{ $active == 'dashboard' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}"><i
                                     class="fa-solid fa-table-columns"></i> Dashboard Admin</a>
                             {{-- Logout --}}
@@ -92,20 +92,21 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     {{-- Dropdown small nav --}}
-    <div class="md:hidden hidden absolute bg-gray-100 z-60 w-[80%] right-0 mx-[1rem] rounded-md shadow-xl"
+    <div class="lg:hidden hidden absolute bg-gray-100 z-60 w-[80%] right-0 mx-[1rem] rounded-md shadow-xl"
         id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2 md:px-3">
+        <div class="space-y-1 px-2 pb-3 pt-2 lg:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/"
                 class="block rounded-md px-3 py-2 text-base font-medium  {{ $active == 'beranda' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Beranda</a>
-            <a href="/tema"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'tema' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">UKM</a>
-            <a href="/ayat"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'ayat' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Departemen</a>
-            <a href="/contact"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'contact' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Artikel</a>
+            <a href="/blog"
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'blog' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-Press Releasehover:text-white' }}">Press
+                Release</a>
+            <a href="/departement"
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'departement' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Departemen</a>
             <a href="/about"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Halaman
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Tentang</a>
+            <a href="/lainnya"
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'lainnya' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Halaman
                 Lainnya</a>
         </div>
         @auth
