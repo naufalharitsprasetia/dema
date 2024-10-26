@@ -7,13 +7,15 @@
         {{-- <div class="mx-auto">
             <img class="w-96 mt-8" src="/img/logodema.png" alt="">
         </div> --}}
-        <div class="text-center flex flex-col justify-center items-center text-secondary p-8 rounded-tl-xl rounded-tr-xl shadow-lg"
+        <div class="text-center flex flex-col justify-center items-center text-secondary p-3 md:p-8 rounded-tl-xl rounded-tr-xl shadow-lg"
             style="background: linear-gradient(115deg, rgba(0, 104, 174, 0.93) 3.21%, rgba(0, 17, 28, 0.93) 64.41%);">
             <div class="flex my-4">
-                <img class="w-52" src="/img/logodema.png" alt="">
+                <img class="w-44 md:w-52" src="/img/logodema.png" alt="">
             </div>
             {{-- <span class="mt-6 uppercase text-sm">Website Resmi</span> --}}
-            <h1 class="mt-6 font-montserrat font-[800] uppercase text-5xl tracking-widest">Dewan <br>Mahasiswa</h1>
+            <h1 class="mt-3 md:mt-6 font-montserrat font-[800] uppercase text-3xl md:text-5xl tracking-widest">Dewan
+                <br>Mahasiswa
+            </h1>
         </div>
     </div>
     {{-- Kabinet Section --}}
@@ -24,14 +26,14 @@
             </div>
         </div>
         <div class="mx-auto">
-            <img class="mx-auto" src="/img/fotokita.png" alt="">
+            <img class="mx-auto" src="/img/fotokita.png" alt="" loading="lazy">
         </div>
     </div>
     {{-- Tentang Dema Section --}}
     <div class="about-section bg-primary">
         <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16 text-secondary">
             <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
-                <img class="w-[150rem]" src="/img/logodema.png" alt="">
+                <img class="w-[150rem]" src="/img/logodema.png" alt="" loading="lazy">
             </div>
             <div class="text-about">
                 <h2 class="font-bold text-[50px] text-center mb-8">Tentang DEMA</h2>
@@ -108,7 +110,7 @@
         <div class="artikel flex flex-col md:flex-row max-w-7xl px-12 pt-16 mx-auto">
             <div class="heading-artikel pr-10 mr-8">
                 <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
-                <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="">
+                <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="" loading="lazy">
                 <h3 class="font-bold text-3xl">Gebyar Kemerdekaan 2024</h3>
                 <br>
                 <a href="#" class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
@@ -117,28 +119,28 @@
                 {{-- card artikel --}}
                 <a class="hover:bg-third/80 rounded-lg p-2" href="">
                     <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="">
+                        <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="" loading="lazy">
                         <span class="font-semibold text-xl mt-3">LDK Dema Hadisatya</span>
                     </div>
                 </a>
                 {{-- card artikel --}}
                 <a class="hover:bg-third/80 rounded-lg p-2" href="">
                     <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="">
+                        <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="" loading="lazy">
                         <span class="font-semibold text-xl mt-3">Internal Cup 2024</span>
                     </div>
                 </a>
                 {{-- card artikel --}}
                 <a class="hover:bg-third/80 rounded-lg p-2" href="">
                     <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="">
+                        <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="" loading="lazy">
                         <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
                     </div>
                 </a>
                 {{-- card artikel --}}
                 <a class="hover:bg-third/80 rounded-lg p-2" href="">
                     <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="">
+                        <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="" loading="lazy">
                         <span class="font-semibold text-xl mt-3">Peringatan 17 Agustus Ke-79</span>
                     </div>
                 </a>

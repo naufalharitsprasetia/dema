@@ -33,7 +33,8 @@ class HomeController extends Controller
     public function dashboard()
     {
         $active = "dashboard";
-        $blogs = Blog::all(); // where User id == auth()
+        $userId = auth()->user()->id;
+        $blogs = Blog::where('user_id', $userId)->get(); // where User id == auth()
         return view('admin.dashboard', compact('active', 'blogs'));
     }
 }

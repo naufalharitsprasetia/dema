@@ -40,7 +40,7 @@
         </div>
         <div class="showing-total mb-4">
             {{-- <p class="text-base font-semibold">Total Artikels : {{ $blogs->total() }}</p> --}}
-            <p class="text-base font-semibold">Total Artikels : NaN</p>
+            <p class="text-base font-semibold">Total Artikels : {{ count($blogs) }}</p>
         </div>
         <!-- Table -->
         <div class="table-blog overflow-x-auto rounded-md bg-slate-200 px-4 py-3">
@@ -65,14 +65,14 @@
                         <tr>
                             <td class="py-2 md:px-4 border-b border-r text-center">
                                 {{ $loop->iteration + ($blogs->currentPage() - 1) * $blogs->perPage() }}</td>
-                            <td class="py-2 px-4 border-b border-r">{{ $blog->judul }}</td>
-                            <td class="py-2 px-4 border-b border-r line-clamp-2">
+                            <td class="py-2 px-4 border-b border-r">
+                                <div class="">{{ $blog->judul }}
+                                </div>
+                            </td>
+                            <td class="py-2 px-4 border-b border-r line-clamp-5">
                                 <div class="">
-                                    {!! $blog->isi !!} Lorem ipsum dolor
-                                    sit
-                                    amet,
-                                    consectetur adipisicing elit. Reprehenderit, doloribus nulla. Enim eligendi commodi
-                                    aspernatur natus, sequi veritatis maiores vel.</div>
+                                    {!! $blog->isi !!}
+                                </div>
                             </td>
                             @auth
                                 <td class="py-2 px-4 border-b border-r ">

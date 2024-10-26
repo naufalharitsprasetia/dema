@@ -16,9 +16,21 @@ class BlogController extends Controller
     public function index()
     {
         $active = 'blog';
-        $blogs = Blog::orderBy('created_at', 'asc')->get();
-        return view('blog.index',  compact('active', 'blogs'));
+
+        // Ambil 2 data terbaru untuk $beritaUtama dengan Eloquent agar bisa menggunakan relasi
+        $beritaUtama = Blog::with('user')->orderBy('created_at', 'desc')->limit(2)->get();
+
+        // Ambil sisa data setelah 2 data terbaru untuk $blogs dengan Query Builder
+        $blogs = DB::table('blogs')->orderBy('created_at', 'desc')->offset(2)->limit(PHP_INT_MAX)->get();
+
+        // Pisahkan $beritaUtama menjadi $beritaUtama1 dan $beritaUtama2
+        $beritaUtama1 = $beritaUtama[0] ?? null;
+        $beritaUtama2 = $beritaUtama[1] ?? null;
+
+        return view('blog.index', compact('active', 'blogs', 'beritaUtama1', 'beritaUtama2'));
     }
+
+
     public function list(Request $request)
     {
         $active = 'blog';
@@ -115,7 +127,7 @@ class BlogController extends Controller
 
         // Siapkan data yang akan diperbarui
         $data = [
-            'judul' => $request->judol,
+            'judul' => $request->judul,
             'isi' => $request->isi,
             'link_dokumentasi' => $request->link_dokumentasi,
             'updated_at' => now(),

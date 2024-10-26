@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
     public function login()
     {
-        $active = "home";
+        $active = "login";
         return view('auth.login', compact('active'));
     }
     public function authenticate(Request $request)

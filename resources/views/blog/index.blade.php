@@ -2,26 +2,77 @@
 
 @section('content')
     {{-- Artikel Index --}}
-    <div class="artikel-section bg-secondary text-primary">
+    <div class="artikel-section bg-gray-200 text-primary">
         <div class="artikel max-w-7xl mx-auto py-12 pb-6 text-center ">
-            <h1 class="text-5xl font-bold text-center">PRESS RELEASE</h1>
+            {{-- <h1 class="text-5xl font-bold text-center">PRESS RELEASE</h1> --}}
+            <h2 class="text-lg font-bold uppercase tracking-wide bg-black text-white inline-block px-2 py-1">Berita
+                Terkini</h2>
+            <p class="mt-2 text-lg">Jelajahi Kegiatan-Kegiatan Dan Berita Terkini</p>
         </div>
         {{-- Artikel Section --}}
-        <div class="artikel-section bg-secondary text-primary">
-            <div
-                class="max-w-7xl px-12 pt-4 pb-12 mx-auto w-full flex flex-wrap pl-8 border-l-4 border-secondary justify-center items-center">
+        {{-- <div class="artikel-section">
+            <div class="max-w-7xl px-12 pt-4 pb-12 mx-auto w-full flex flex-wrap justify-center items-center">
                 @foreach ($blogs as $blog)
-                    {{-- card artikel --}}
-                    <a class="hover:bg-third/80 rounded-lg p-2" href="/blog/{{ $blog->id }}">
-                        <div class="card-artikel text-center">
-                            <img class="w-[300px] h-[200px] rounded-lg mb-4" src="{{ asset('storage/' . $blog->image) }}"
-                                alt="{{ $blog->judul }}">
-                            <span class="font-semibold text-xl mt-3">{{ $blog->judul }}</span>
+                    <a class="p-2" href="/blog/{{ $blog->id }}">
+                        <div class="relative overflow-hidden rounded-lg card-artikel text-center">
+                            <img class="w-[300px] h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out"
+                                src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                                <span class="font-semibold text-xl mt-3 title">{{ $blog->judul }}</span>
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+        </div> --}}
+
+        {{-- Bagian Berita Terkini --}}
+        <div class="container mx-auto px-4">
+            <!-- Bagian Header -->
+            <!-- Grid Berita -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Berita Utama 1 -->
+                <a href="/blog/{{ $beritaUtama1->id }}" class="relative col-span-2 row-span-2 overflow-hidden rounded-lg">
+                    <img src="{{ asset('storage/' . $beritaUtama1->image) }}" alt="{{ $beritaUtama1->judul }}"
+                        class="w-full h-full object-cover transform transition-transform hover:scale-110 duration-300 ease-in-out">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
+                        <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                            {{ $beritaUtama1->judul }}</h3>
+                        <p class="mt-2">{{ $beritaUtama1->user->name }} - {{ \Carbon\Carbon::parse($beritaUtama1->created_at)->translatedFormat('d M Y') }}</p>
+                    </div>
+                </a>
+
+                <!-- Berita Utama 2 -->
+                <a href="/blog/{{ $beritaUtama2->id }}" class="relative col-span-2 overflow-hidden rounded-lg">
+                    <img src="{{ asset('storage/' . $beritaUtama2->image) }}" alt="{{ $beritaUtama2->judul }}"
+                        class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
+                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                        <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
+                        <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                            {{ $beritaUtama2->judul }}</h3>
+                        <p class="mt-2">{{ $beritaUtama2->user->name }} - {{ \Carbon\Carbon::parse($beritaUtama2->created_at)->translatedFormat('d M Y') }}</p>
+                    </div>
+                </a>
+
+                @foreach ($blogs as $blog)
+                    <!-- Kartu Berita Lainnya -->
+                    <a href="/blog/{{ $blog->id }}" class="relative overflow-hidden rounded-lg">
+                        <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}"
+                            class="w-[300px] h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                            <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
+                            <h3 class="text-lg font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                                {{ $blog->judul }}</h3>
                         </div>
                     </a>
                 @endforeach
 
             </div>
         </div>
+        <br>
+        {{-- End Bagian Berita Terkini --}}
     </div>
 @endsection
