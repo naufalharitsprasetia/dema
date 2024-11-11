@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- contact Us --}}
-    <div class="contact-section bg-secondary text-primary">
+    <div class="contact-section bg-gray-50 text-primary">
         <div class="contact max-w-7xl mx-auto py-16 px-14 flex flex-col md:flex-row">
             <div class="kiri-contact w-full">
                 <h2 class="text-4xl font-bold mb-4">Kontak Kami</h2>
@@ -33,19 +33,17 @@
                         <div class="flex flex-col input-div w-full">
                             <label for="nama" class="font-semibold">Nama</label>
                             <input type="text" name="nama" id="nama"
-                                class="p-2 w-full border-2 border-primary bg-secondary rounded-md"
-                                placeholder="Nama Lengkap">
+                                class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Nama Lengkap">
                         </div>
                         <div class="flex flex-col input-div w-full ml-4">
                             <label for="email" class="font-semibold">Email</label>
                             <input type="email" name="email" id="email"
-                                class="p-2 w-full border-2 border-primary bg-secondary rounded-md"
-                                placeholder="Alamat Email">
+                                class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Alamat Email">
                         </div>
                     </div>
                     <div class="flex flex-col input-pesan mt-2">
                         <label for="pesan" class="font-semibold">Pesan</label>
-                        <textarea class="p-2 border-2 border-primary bg-secondary rounded-md" name="pesan" id="pesan" cols="30"
+                        <textarea class="p-2 border-2 border-primary bg-gray-50 rounded-md" name="pesan" id="pesan" cols="30"
                             rows="10" placeholder="Pesan yang ingin disampaikan"></textarea>
                     </div>
                     <button type="submit" class="text-white bg-sixth px-4 py-2 font-semibold text-xl mt-4 rounded-lg">Kirim

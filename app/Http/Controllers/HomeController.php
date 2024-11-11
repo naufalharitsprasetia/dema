@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -11,7 +12,14 @@ class HomeController extends Controller
     public function index()
     {
         $active = 'beranda';
-        return view('home.index',  compact('active'));
+        // Ambil 2 data terbaru untuk $beritaUtama dengan Eloquent agar bisa menggunakan relasi
+        $beritaUtamaAll = Blog::with('user')->orderBy('created_at', 'desc')->limit(1)->get();
+
+        // Ambil sisa data setelah 2 data terbaru untuk $blogs dengan Query Builder
+        $blogs = DB::table('blogs')->orderBy('created_at', 'desc')->offset(2)->limit(4)->get();
+        $beritaUtama = $beritaUtamaAll[0] ?? null;
+
+        return view('home.index',  compact('active', 'beritaUtama', 'blogs'));
     }
 
     public function about()

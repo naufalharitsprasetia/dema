@@ -2,10 +2,10 @@
 
 @section('content')
     {{-- ukm Us --}}
-    <div class="ukm-section bg-secondary text-primary">
-        <div class="ukm max-w-7xl mx-auto py-16">
+    <div class="ukm-section bg-gray-50 text-primary">
+        <div class="ukm max-w-7xl mx-auto py-16 px-10">
             <h1 class="text-5xl font-bold text-center mb-4">Unit Kegiatan Mahasiswa (UKM)</h1>
-            <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1>
+            {{-- <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1> --}}
             <div class="penjelasan-ukm p-4">
                 <h2 class="font-semibold text-3xl font-poppins"> APA ITU UKM ?</h2>
                 <blockquote> Unit Kegiatan Mahasiswa (UKM) adalah organisasi mahasiswa santri yang dinaungi Dewan Mahasiswa
@@ -64,7 +64,7 @@
         </div>
         <hr>
         {{-- Olah Fikir --}}
-        <div class="divisi-card bg-primary text-secondary shadow-lg p-12 rounded-lg">
+        <div class="divisi-card bg-primary text-secondary shadow-lg p-12">
             <h2 class="text-center font-semibold text-2xl mb-8">Divisi Olah Fikir</h2>
             <div class="flex flex-wrap ukm-groups gap-8 justify-evenly items-center">
                 <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">
@@ -87,7 +87,7 @@
         </div>
         <hr class="border-secondary border-2 my-2">
         {{-- Olah Rasa --}}
-        <div class="divisi-card bg-primary text-secondary shadow-lg p-12 rounded-lg">
+        <div class="divisi-card bg-primary text-secondary shadow-lg p-12">
             <h2 class="text-center font-semibold text-2xl mb-8">Divisi Olah Rasa</h2>
             <div class="flex flex-wrap ukm-groups gap-8 justify-evenly items-center">
                 <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">
@@ -158,7 +158,7 @@
         </div>
         <hr class="border-secondary border-2 my-2">
         {{-- Olah Dzikir --}}
-        <div class="divisi-card bg-primary text-secondary shadow-lg p-12 rounded-lg">
+        <div class="divisi-card bg-primary text-secondary shadow-lg p-12">
             <h2 class="text-center font-semibold text-2xl mb-8">Divisi Olah Dzikir</h2>
             <div class="flex flex-wrap ukm-groups gap-8 justify-evenly items-center">
                 <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">
@@ -174,7 +174,7 @@
         </div>
         <hr class="border-secondary border-2 my-2">
         {{-- Olah Raga --}}
-        <div class="divisi-card bg-primary text-secondary shadow-lg p-12 rounded-lg">
+        <div class="divisi-card bg-primary text-secondary shadow-lg p-12">
             <h2 class="text-center font-semibold text-2xl mb-8">Divisi Olah Raga</h2>
             <div class="flex flex-wrap ukm-groups gap-8 justify-evenly items-center">
                 <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">

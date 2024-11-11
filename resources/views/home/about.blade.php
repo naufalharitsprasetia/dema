@@ -7,8 +7,8 @@
         <img class="w-[34rem]" src="/img/abouthadisatya.png" alt="">
     </div>
     {{-- Tentang Dema Section --}}
-    <div class="about-section bg-primary">
-        <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16 text-secondary">
+    <div class="about-section bg-gray-50 text-primary">
+        <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16">
             <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
                 <img class="w-[150rem]" src="/img/logodema.png" alt="">
             </div>
@@ -28,20 +28,20 @@
         </div>
     </div>
     {{-- Visi Misi Section --}}
-    <div class="visimisi-section bg-secondary text-primary">
+    <div class="visimisi-section bg-gray-50 text-primary">
         <div class="visimisi flex flex-wrap md:flex-nowrap mx-auto max-w-7xl px-12 py-16">
             <div class="visi px-8">
-                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
+                <h2 class="font-semibold text-xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
                 </h2>
-                <p class="text-[24px]">Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang
+                <p class="text-[16px]">Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang
                     berperan inspiratif,
                     inklusif, dan inovatif dalam membangun karakter, kompetensi, dan kontribusi mahasiswa, guna menciptakan
                     generasi pemimpin yang berintegritas, berwawasan luas, dan berkomitmen pada nilai-nilai Islami.</p>
             </div>
             <div class="misi mt-4 md:mt-0 px-8">
-                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
+                <h2 class="font-semibold text-xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
                 </h2>
-                <ul class="text-[24px]">
+                <ul class="text-[16px]">
                     <li>- Membangun lingkungan yang kondusif bagi seluruh mahasiswa untuk mengembangkan potensi secara
                         optimal, baik dalam aspek intelektual, spiritual, maupun sosial, sehingga dapat menjadi pemimpin
                         yang inspiratif dan membawa perubahan positif bagi lingkungan.
@@ -57,7 +57,7 @@
         </div>
     </div>
     {{-- Struktur Dema Section --}}
-    <div class="struktur-section bg-third text-white">
+    <div class="struktur-section bg-gray-50">
         <div class="struktur mx-auto text-center mx-auto max-w-7xl px-12 py-16">
             <h1 class="text-5xl font-bold text-center">Struktur</h1>
             <br>

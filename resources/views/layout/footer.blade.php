@@ -35,7 +35,7 @@
                     63471
                 </p>
             </div>
-            <div class="flex mt-4 gap-8">
+            <div class="flex mt-4 gap-8 flex-col md:flex-row">
                 <div class="email">
                     <h4 class="text-base font-semibold">Email</h4>
                     <p class="text-sm">demasiman@unida.gontor.ac.id</p>

@@ -2,11 +2,14 @@
     <div class="mx-auto max-w-7xl px-2 lg:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
-                <div class="absolute z-[999] top-0 left-4 ">
-                    <img class="h-[6rem] w-auto" src="/img/logodemanavbar.png" alt="Your Company">
+                <div class="absolute z-[999] top-0 left-4 hidden md:block">
+                    <img class="h-[4rem] md:h-[6rem] w-auto" src="/img/logodemanavbar.png" alt="Your Company">
                 </div>
-                <div class="flex flex-shrink-0 items-center ml-28">
-                    <h2 class="mx-4 text-secondary font-poppins font-semibold text-lg">DEMA UNIDA GONTOR</h2>
+                <div class="flex flex-shrink-0 items-center  md:ml-28">
+                    <img class="h-[4rem] md:h-[6rem] w-auto md:hidden" src="/img/logodemanavbar.png" alt="Your Company">
+                    <h2 class="mx-3 md:mx-4 text-secondary font-poppins font-semibold text-base md:text-lg">DEMA UNIDA
+                        GONTOR
+                    </h2>
                 </div>
                 <div class="hidden lg:ml-6 lg:block">
                     <div class="ml-10 flex gap-6 items-center">

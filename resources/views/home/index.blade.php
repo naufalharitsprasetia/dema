@@ -52,19 +52,19 @@
     </div>
     {{-- Visi Misi Section --}}
     <div class="visimisi-section bg-secondary text-primary">
-        <div class="visimisi flex flex-wrap md:flex-nowrap mx-auto max-w-7xl px-12 py-16">
-            <div class="visi px-8">
-                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
+        <div class="visimisi flex flex-wrap md:flex-nowrap mx-auto max-w-7xl px-10 py-16">
+            <div class="visi">
+                <h2 class="font-semibold text-xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Visi
                 </h2>
-                <p class="text-[24px]">Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang
+                <p class="text-[18px]">Menjadikan Dewan Mahasiswa Universitas Darussalam Gontor sebagai wadah inklusif yang
                     berperan inspiratif,
                     inklusif, dan inovatif dalam membangun karakter, kompetensi, dan kontribusi mahasiswa, guna menciptakan
                     generasi pemimpin yang berintegritas, berwawasan luas, dan berkomitmen pada nilai-nilai Islami.</p>
             </div>
-            <div class="misi mt-4 md:mt-0 px-8">
-                <h2 class="font-semibold text-3xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
+            <div class="misi mt-4 md:mt-0">
+                <h2 class="font-semibold text-xl bg-primary text-secondary inline-block px-5 py-3 rounded-lg mb-5">Misi
                 </h2>
-                <ul class="text-[24px]">
+                <ul class="text-[18px]">
                     <li>- Membangun lingkungan yang kondusif bagi seluruh mahasiswa untuk mengembangkan potensi secara
                         optimal, baik dalam aspek intelektual, spiritual, maupun sosial, sehingga dapat menjadi pemimpin
                         yang inspiratif dan membawa perubahan positif bagi lingkungan.
@@ -110,40 +110,24 @@
         <div class="artikel flex flex-col md:flex-row max-w-7xl px-12 pt-16 mx-auto">
             <div class="heading-artikel pr-10 mr-8">
                 <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
-                <img class="w-[750px] mb-4" src="/img/artikel1.png" alt="" loading="lazy">
-                <h3 class="font-bold text-3xl">Gebyar Kemerdekaan 2024</h3>
+                <img class="w-[750px] h-[300px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4"
+                    src="{{ asset('storage/' . $beritaUtama->image) }}" alt="" loading="lazy">
+                <h3 class="font-bold text-3xl">{{ $beritaUtama->judul }}</h3>
                 <br>
-                <a href="#" class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
+                <a href="/blog/{{ $beritaUtama->id }}"
+                    class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
             </div>
             <div class="mt-6 md:mt-0 kanan-artikel w-full flex flex-wrap pl-8 border-l-4 border-secondary">
-                {{-- card artikel --}}
-                <a class="hover:bg-third/80 rounded-lg p-2" href="">
-                    <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel2.png" alt="" loading="lazy">
-                        <span class="font-semibold text-xl mt-3">LDK Dema Hadisatya</span>
-                    </div>
-                </a>
-                {{-- card artikel --}}
-                <a class="hover:bg-third/80 rounded-lg p-2" href="">
-                    <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel3.png" alt="" loading="lazy">
-                        <span class="font-semibold text-xl mt-3">Internal Cup 2024</span>
-                    </div>
-                </a>
-                {{-- card artikel --}}
-                <a class="hover:bg-third/80 rounded-lg p-2" href="">
-                    <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel4.png" alt="" loading="lazy">
-                        <span class="font-semibold text-xl mt-3">Pelantikan Dema Hadisatya</span>
-                    </div>
-                </a>
-                {{-- card artikel --}}
-                <a class="hover:bg-third/80 rounded-lg p-2" href="">
-                    <div class="card-artikel text-center">
-                        <img class="w-[300px] mb-4" src="/img/artikel5.png" alt="" loading="lazy">
-                        <span class="font-semibold text-xl mt-3">Peringatan 17 Agustus Ke-79</span>
-                    </div>
-                </a>
+                @foreach ($blogs as $blog)
+                    {{-- card artikel --}}
+                    <a class="hover:bg-third/80 rounded-lg p-2" href="/blog/{{ $blog->id }}">
+                        <div class="card-artikel text-center">
+                            <img class="w-[300px] h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4"
+                                src="{{ asset('storage/' . $blog->image) }}" alt="" loading="lazy">
+                            <span class="font-semibold text-xl mt-3">{{ $blog->judul }}</span>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
         <div class="flex max-w-7xl px-12 justify-center align-center pt-8 pb-16 mx-auto">
@@ -152,14 +136,17 @@
     </div>
     {{-- Video Profil Section  --}}
     <div class="video-section bg-secondary bg-cover" style="background-image: url('/img/videocorak.png')">
-        <div class="artikel max-w-7xl px-12 pt-12 mx-auto">
+        <div class="artikel max-w-7xl px-12 pt-12 mx-auto pb-12">
             <div class="mx-auto text-center">
                 <h2 class="text-primary text-5xl font-bold">Video Profil</h2>
             </div>
-            <div class="relative w-full pt-[66%] bg-no-repeat bg-center bg-cover" style="background-image: url();">
-                <iframe title="youtubeVt " class="absolute top-[14.7%] left-[8%] w-[84.3%] h-[67%] border-none"
-                    src="https://www.youtube.com/embed/qkUEztoUfmI?si=5mRRrZc3PEuxzdOo"
-                    allow="accelerometer; clipboard-write; encrypted-media;" loading="lazy"></iframe>
+            {{-- <div class="relative w-full pt-[66%] bg-no-repeat bg-center bg-cover" style="background-image: url();">
+            </div> --}}
+            <div class="flex justify-center items-center mx-auto pt-8">
+                <iframe width="840" height="460" src="https://www.youtube.com/embed/qkUEztoUfmI?si=FwO1GkjuwgSo0flf"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
