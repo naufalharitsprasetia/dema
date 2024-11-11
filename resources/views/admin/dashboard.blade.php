@@ -34,77 +34,55 @@
                 </div>
             </div>
 
-            <!-- Ayat Card -->
-            {{-- <div class="bg-white shadow-lg rounded-lg p-6">
-                <div class="flex items-center">
-                    <div class="text-green-500 bg-green-100 p-4 rounded-full">
-                        <!-- Icon here -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm4-8H6a1 1 0 000 2h8a1 1 0 000-2z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="ml-4">
-                        <p class="text-gray-600">Jumlah Ayat Tafsir Sains</p>
-                        <p class="text-2xl font-bold">{{ count($ayats) }}</p>
-                    </div>
-                </div>
-                <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/ayat-create"
-                        class="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded block">Tambahkan
-                        Ayat Baru</a>
-                    <a href="/ayat" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
-                        Ayat</a>
-                </div>
-            </div> --}}
-
-
-            <!-- AYAT_TEMA  Card -->
-            {{-- <div class="bg-white shadow-lg rounded-lg p-6">
-                <div class="flex items-center">
-                    <div class="text-purple-500 bg-purple-100 p-4 rounded-full">
-                        <!-- Icon here -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm8 3a1 1 0 10-2 0v4a1 1 0 102 0V6z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="ml-4">
-                        <p class="text-gray-600">Jumlah Hubungan Ayat dengan Tema</p>
-                        <p class="text-2xl font-bold">{{ $hubungan }}</p>
-                    </div>
-                </div>
-                <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/ayat-tema/create"
-                        class="bg-purple-500 hover:bg-purple-700 text-white px-4 py-2 rounded block">Buat
-                        Hubungan</a>
-                    <a href="/ayat-tema" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
-                        Hubungan</a>
-                </div>
-            </div> --}}
-
-            <!-- Masukkan Card -->
-            {{-- <div class="bg-white shadow-lg rounded-lg p-6">
+            <!-- Divisi Card -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
                 <div class="flex items-center">
                     <div class="text-red-500 bg-red-100 p-4 rounded-full">
                         <!-- Icon here -->
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
-                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm8 3a1 1 0 10-2 0v4a1 1 0 102 0V6z"
+                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm10 3a1 1 0 10-2 0v4a1 1 0 102 0V6zm-4 0a1 1 0 10-2 0v4a1 1 0 102 0V6z"
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
                     <div class="ml-4">
-                        <p class="text-gray-600">Jumlah Masukkan Kritik Dan Saran</p>
-                        <p class="text-2xl font-bold">{{ count($masukkans) }}</p>
+                        <p class="text-gray-600">Jumlah Divisi</p>
+                        <p class="text-2xl font-bold">{{ count($divisions) }}</p>
                     </div>
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/masukkan" class="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded block">List
-                        Masukkan</a>
+                    <a href="/divisi-create" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 block">Buat
+                        Divisi Baru</a>
+                    <a href="/divisi" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                        Divisi</a>
                 </div>
-            </div> --}}
+            </div>
+
+            <!-- Departement Card -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <div class="flex items-center">
+                    <div class="text-green-500 bg-green-100 p-4 rounded-full">
+                        <!-- Icon here -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm10 3a1 1 0 10-2 0v4a1 1 0 102 0V6zm-4 0a1 1 0 10-2 0v4a1 1 0 102 0V6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-gray-600">Jumlah Departement</p>
+                        <p class="text-2xl font-bold">{{ count($departements) }}</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="/departement-create"
+                        class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 block">Buat
+                        Departement Baru</a>
+                    <a href="/departement" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                        Departements</a>
+                </div>
+            </div>
+
 
         </div>
     </div>

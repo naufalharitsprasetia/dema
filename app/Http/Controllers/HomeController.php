@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Departement;
+use App\Models\Division;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -43,6 +45,8 @@ class HomeController extends Controller
         $active = "dashboard";
         $userId = auth()->user()->id;
         $blogs = Blog::where('user_id', $userId)->get(); // where User id == auth()
-        return view('admin.dashboard', compact('active', 'blogs'));
+        $divisions = Division::all();
+        $departements = Departement::all();
+        return view('admin.dashboard', compact('active', 'blogs', 'divisions', 'departements'));
     }
 }

@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Division extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'id',
+        'nama',
+        'deskripsi',
+        'urutan',
+        'created_at',
+        'updated_at'
+    ];
+    protected $primaryKey = 'id';
+    protected $keyType = 'string'; // Atur tipe data primary key sebagai string
+    public $incrementing = false; // Nonaktifkan incrementing ID
+    public $timestamps = true; // Menonaktifkan fitur timestamps
+
+    public function departements()
+    {
+        return $this->hasMany(Departement::class, 'divisi_id', 'id');
+    }
 }

@@ -30,50 +30,57 @@
         {{-- Bagian Berita Terkini --}}
         <div class="container mx-auto px-4">
             <!-- Bagian Header -->
-            <!-- Grid Berita -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Berita Utama 1 -->
-                <a href="/blog/{{ $beritaUtama1->id }}" class="relative col-span-2 row-span-2 overflow-hidden rounded-lg">
-                    <img src="{{ asset('storage/' . $beritaUtama1->image) }}" alt="{{ $beritaUtama1->judul }}"
-                        class="w-full h-full object-cover transform transition-transform hover:scale-110 duration-300 ease-in-out">
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
-                        <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
-                        <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
-                            {{ $beritaUtama1->judul }}</h3>
-                        <p class="mt-2">{{ $beritaUtama1->user->name }} -
-                            {{ \Carbon\Carbon::parse($beritaUtama1->created_at)->translatedFormat('d M Y') }}</p>
-                    </div>
-                </a>
-
-                <!-- Berita Utama 2 -->
-                <a href="/blog/{{ $beritaUtama2->id }}" class="relative col-span-2 overflow-hidden rounded-lg">
-                    <img src="{{ asset('storage/' . $beritaUtama2->image) }}" alt="{{ $beritaUtama2->judul }}"
-                        class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
-                        <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
-                        <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
-                            {{ $beritaUtama2->judul }}</h3>
-                        <p class="mt-2">{{ $beritaUtama2->user->name }} -
-                            {{ \Carbon\Carbon::parse($beritaUtama2->created_at)->translatedFormat('d M Y') }}</p>
-                    </div>
-                </a>
-
-                @foreach ($blogs as $blog)
-                    <!-- Kartu Berita Lainnya -->
-                    <a href="/blog/{{ $blog->id }}"
-                        class="relative overflow-hidden rounded-lg col-span-2 md:col-span-1">
-                        <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}"
-                            class="lg:w-[300px] lg:h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
+            @if (!isset($beritaUtama1))
+                <h1 class="text-center font-semibold underline text-red-500">Maaf, Sedang Tidak Ada Berita</h1>
+            @else
+                <!-- Grid Berita -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Berita Utama 1 -->
+                    <a href="/blog/{{ $beritaUtama1->id }}" class="relative col-span-2 row-span-2 overflow-hidden rounded-lg">
+                        <img src="{{ asset('storage/' . $beritaUtama1->image) }}" alt="{{ $beritaUtama1->judul }}"
+                            class="w-full h-full object-cover transform transition-transform hover:scale-110 duration-300 ease-in-out">
                         <div
                             class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
                             <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
-                            <h3 class="text-lg font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
-                                {{ $blog->judul }}</h3>
+                            <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                                {{ $beritaUtama1->judul }}</h3>
+                            <p class="mt-2">{{ $beritaUtama1->user->name }} -
+                                {{ \Carbon\Carbon::parse($beritaUtama1->created_at)->translatedFormat('d M Y') }}</p>
                         </div>
                     </a>
-                @endforeach
 
-            </div>
+                    <!-- Berita Utama 2 -->
+                    <a href="/blog/{{ $beritaUtama2->id }}" class="relative col-span-2 overflow-hidden rounded-lg">
+                        <img src="{{ asset('storage/' . $beritaUtama2->image) }}" alt="{{ $beritaUtama2->judul }}"
+                            class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
+                        <div
+                            class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                            <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
+                            <h3 class="text-2xl font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                                {{ $beritaUtama2->judul }}</h3>
+                            <p class="mt-2">{{ $beritaUtama2->user->name }} -
+                                {{ \Carbon\Carbon::parse($beritaUtama2->created_at)->translatedFormat('d M Y') }}</p>
+                        </div>
+                    </a>
+
+                    @foreach ($blogs as $blog)
+                        <!-- Kartu Berita Lainnya -->
+                        <a href="/blog/{{ $blog->id }}"
+                            class="relative overflow-hidden rounded-lg col-span-2 md:col-span-1">
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}"
+                                class="lg:w-[300px] lg:h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+                                <span class="bg-blue-500 text-xs font-bold uppercase px-2 py-1">DEMA</span>
+                                <h3 class="text-lg font-bold mt-2 transition-colors duration-300 hover:text-orange-500">
+                                    {{ $blog->judul }}</h3>
+                            </div>
+                        </a>
+                    @endforeach
+
+                </div>
+            @endif
+
         </div>
         <br>
         {{-- End Bagian Berita Terkini --}}

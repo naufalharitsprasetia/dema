@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DepartementController;
+use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UKMController;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +59,20 @@ Route::middleware('auth')->group(
         Route::get('/blog-edit/{blog}', [BlogController::class, 'edit'])->name('blog.edit');
         Route::put('/blog-edit/{blog}', [BlogController::class, 'update'])->name('blog.update');
         Route::delete('/blog-delete/{blog}', [BlogController::class, 'destroy'])->name('blog.destroy');
+        // Divisi 
+        Route::get('/divisi', [DivisionController::class, 'index'])->name('divisi.index');
+        Route::get('/divisi-create', [DivisionController::class, 'create'])->name('divisi.create');
+        Route::post('/divisi-create', [DivisionController::class, 'store'])->name('divisi.store');
+        Route::get('/divisi-edit/{division}', [DivisionController::class, 'edit'])->name('divisi.edit');
+        Route::put('/divisi-edit/{division}', [DivisionController::class, 'update'])->name('divisi.update');
+        Route::delete('/divisi-delete/{division}', [DivisionController::class, 'destroy'])->name('divisi.destroy');
+        // Departement
+        Route::get('/departement-list', [DepartementController::class, 'list'])->name('departement.list');
+        Route::get('/departement-create', [DepartementController::class, 'create'])->name('departement.create');
+        Route::post('/departement-create', [DepartementController::class, 'store'])->name('departement.store');
+        Route::get('/departement-edit/{departement}', [DepartementController::class, 'edit'])->name('departement.edit');
+        Route::put('/departement-edit/{departement}', [DepartementController::class, 'update'])->name('departement.update');
+        Route::delete('/departement-delete/{departement}', [DepartementController::class, 'destroy'])->name('departement.destroy');
     }
 );
 
