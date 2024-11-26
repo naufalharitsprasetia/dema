@@ -2,7 +2,7 @@
 <!-- Footer Section -->
 <footer class="bg-primary text-secondary p-6 ">
     <div
-        class="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-wrap md:flex-nowrap justify-evenly items-center">
+        class="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-evenly items-center">
         <!-- Left Section: Logo and Details -->
         <div class="flex items-center space-x-4">
             <img src="/img/logodema.png" alt="Logo" class="w-16">
