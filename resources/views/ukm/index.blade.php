@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    {{-- ukm Us --}}
+    {{-- ukm --}}
     <div class="ukm-section bg-gray-50 text-primary">
         <div class="ukm max-w-7xl mx-auto py-16 px-10">
             <h1 class="text-5xl font-bold text-center mb-4">Unit Kegiatan Mahasiswa (UKM)</h1>
@@ -252,6 +252,5 @@
             </div>
         </div>
         <hr class="border-secondary border-2 my-2">
-    </div>
     </div>
 @endsection

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\UKM;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class UKMController extends Controller
 {
@@ -21,7 +24,14 @@ class UKMController extends Controller
      */
     public function create()
     {
-        //
+        $active = 'ukm';
+        return view('ukm.create', compact('active'));
+    }
+    public function list()
+    {
+        $active = 'ukm';
+        $ukms = UKM::all();
+        return view('ukm.list', compact('active', 'ukms'));
     }
 
     /**
@@ -29,7 +39,32 @@ class UKMController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'kategori' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:1000',
+            'jumlah_anggota' => 'nullable|string|max:255',
+            'link_sosmed' => 'nullable|string|max:255',
+            'logo' => 'image|max:5000',
+        ]);
+
+        $data = [
+            'id' => Str::uuid(),
+            'nama' => $request->nama,
+            'kategori' => $request->kategori,
+            'deskripsi' => $request->deskripsi,
+            'jumlah_anggota' => $request->jumlah_anggota,
+            'link_sosmed' => $request->link_sosmed,
+            'created_at' => now(),
+        ];
+
+        if ($request->hasFile('logo')) {
+            $data['logo'] = $request->file('logo')->store('ukms', 'public');
+        }
+
+        DB::table('u_k_m_s')->insert($data);
+
+        return redirect()->route('dashboard')->with('success', 'new ukm created successfully!');
     }
 
     /**
@@ -37,7 +72,8 @@ class UKMController extends Controller
      */
     public function show(UKM $uKM)
     {
-        //
+        $active = 'ukm';
+        return view('ukm.index',  compact('active', 'uKM'));
     }
 
     /**
@@ -45,7 +81,8 @@ class UKMController extends Controller
      */
     public function edit(UKM $uKM)
     {
-        //
+        $active = 'ukm';
+        return view('ukm.edit', compact('active', 'uKM'));
     }
 
     /**
@@ -53,7 +90,45 @@ class UKMController extends Controller
      */
     public function update(Request $request, UKM $uKM)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'kategori' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:1000',
+            'jumlah_anggota' => 'nullable|string|max:255',
+            'logo' => 'image|max:5000',
+            'link_sosmed' => 'nullable|string|max:255',
+        ]);
+
+        // Ambil data yang ada di tabel blogs berdasarkan id
+        $ukm = DB::table('u_k_m_s')->where('id', $uKM->id)->first();
+
+        if (!$ukm) {
+            return redirect()->back()->withErrors('ukm not found!');
+        }
+        // Siapkan data yang akan diperbarui
+        $data = [
+            'nama' => $request->nama,
+            'kategori' => $request->kategori,
+            'deskripsi' => $request->deskripsi,
+            'jumlah_anggota' => $request->jumlah_anggota,
+            'link_sosmed' => $request->link_sosmed,
+            'updated_at' => now(),
+        ];
+
+        if ($request->hasFile('logo')) {
+            // Hapus gambar lama jika ada
+            if ($ukm->logo) {
+                Storage::disk('public')->delete($ukm->logo);
+            }
+            // Simpan gambar baru
+            $data['logo'] = $request->file('logo')->store('ukms', 'public');
+        }
+
+        // Update data produk di database
+        DB::table('u_k_m_s')->where('id', $ukm->id)->update($data);
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'ukm updated successfully!');
     }
 
     /**
@@ -61,6 +136,13 @@ class UKMController extends Controller
      */
     public function destroy(UKM $uKM)
     {
-        //
+        if (!$uKM) {
+            return redirect()->back()->withErrors('ukm not found!');
+        }
+        // Hapus produk dari database
+        DB::table('u_k_m_s')->where('id', $uKM->id)->delete();
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'ukm deleted successfully!');
     }
 }

@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ukms', function (Blueprint $table) {
-            $table->id();
-            $table->string('ukm_nama');
-            $table->string('ukm_deskripsi');
-            $table->string('ukm_image');
+        Schema::create('u_k_m_s', function (Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->string('nama');
+            $table->string('deskripsi');
+            $table->string('kategori');
+            $table->string('jumlah_anggota')->nullable();
+            $table->string('logo');
+            $table->string('link_sosmed')->nullable();
             $table->timestamps();
         });
     }

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold mb-6 text-center">Create Departements</h1>
+        <h1 class="text-3xl font-bold mb-6 text-center">Create UKM</h1>
 
         <div class="mx-4 md:mx-6 lg:mx-16 bg-slate-200 p-4 md:p-8  rounded-lg shadow-lg">
             @if ($errors->any())
@@ -14,45 +14,53 @@
                     </div>
                 </div>
             @endif
-            <form action="/departement-create" method="POST">
+            <form action="/ukm-create" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-4">
-                    <label for="nama" class="block text-gray-700 font-bold mb-2">Nama Departement :</label>
+                    <label for="nama" class="block text-gray-700 font-bold mb-2">Nama UKM :</label>
                     <input type="text" id="nama" name="nama"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         value="{{ old('nama') }}" required>
                 </div>
                 <div class="mb-4">
-                    <label for="division_id" class="block text-gray-700 font-bold mb-2">Divisi :</label>
-                    <select id="division_id" name="division_id"
+                    <label for="kategori" class="block text-gray-700 font-bold mb-2">Kategori Olah :</label>
+                    <select id="kategori" name="kategori"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required>
-                        <option value="">Pilih Divisi</option>
-                        @foreach ($divisions as $division)
-                            <option value="{{ $division->id }}">{{ $division->nama }}
-                            </option>
-                        @endforeach
+                        <option value="">Pilih Kategori Olah:</option>
+                        <option value="Olah Rasa">Olah Rasa</option>
+                        <option value="Olah Pikir">Olah Pikir</option>
+                        <option value="Olah Dzikir">Olah Dzikir</option>
+                        <option value="Olah Raga">Olah Raga</option>
                     </select>
                 </div>
-                <div class="mb-4">
-                    <label for="urutan" class="block text-gray-700 font-bold mb-2">Urutan :</label>
-                    <input type="number" id="urutan" name="urutan"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('urutan') }}" required>
-                </div>
 
                 <div class="mb-4">
-                    <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi Departement :</label>
+                    <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi UKM :</label>
                     <input type="text" id="deskripsi" name="deskripsi"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('deskripsi') }}">
+                        value="{{ old('deskripsi') }}" required>
                 </div>
 
                 <div class="mb-4">
-                    <label for="singkatan" class="block text-gray-700 font-bold mb-2">Singkatan :</label>
-                    <input type="text" id="singkatan" name="singkatan"
+                    <label for="logo" class="block text-gray-700 font-bold mb-2">Logo UKM (Max:5MB):</label>
+                    <input type="file" id="logo" name="logo"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('singkatan') }}">
+                        required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="jumlah_anggota" class="block text-gray-700 font-bold mb-2">Jumlah Anggota UKM :</label>
+                    <input type="text" id="jumlah_anggota" name="jumlah_anggota"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value="{{ old('jumlah_anggota') }}">
+                </div>
+
+                <div class="mb-4">
+                    <label for="link_sosmed" class="block text-gray-700 font-bold mb-2">Link Sosial Media :</label>
+                    <input type="text" id="link_sosmed" name="link_sosmed"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        value="{{ old('link_sosmed') }}">
                 </div>
 
                 <div class="text-center">

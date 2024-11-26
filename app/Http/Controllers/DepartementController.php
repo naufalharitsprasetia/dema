@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Departement;
+use App\Models\Division;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class DepartementController extends Controller
 {
@@ -13,7 +16,14 @@ class DepartementController extends Controller
     public function index()
     {
         $active = 'departement';
-        return view('departement.index',  compact('active'));
+        $divisions = Division::orderBy('urutan', 'asc')->get();
+        return view('departement.index',  compact('active', 'divisions'));
+    }
+    public function list()
+    {
+        $active = 'departement';
+        $departements = Departement::all();
+        return view('departement.list',  compact('active', 'departements'));
     }
 
     /**
@@ -21,7 +31,9 @@ class DepartementController extends Controller
      */
     public function create()
     {
-        //
+        $divisions = Division::all();
+        $active = 'departement';
+        return view('departement.create', compact('active', 'divisions'));
     }
 
     /**
@@ -29,7 +41,27 @@ class DepartementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'division_id' => 'required',
+            'urutan' => 'required|integer',
+            'deskripsi' => 'nullable|string|max:255',
+            'singkatan' => 'nullable|string|max:255',
+        ]);
+
+        $data = [
+            'id' => Str::uuid(),
+            'nama' => $request->nama,
+            'division_id' => $request->division_id,
+            'urutan' => $request->urutan,
+            'deskripsi' => $request->deskripsi,
+            'singkatan' => $request->singkatan,
+            'created_at' => now(),
+        ];
+
+        DB::table('departements')->insert($data);
+
+        return redirect()->route('dashboard')->with('success', 'new departements created successfully!');
     }
 
     /**
@@ -37,7 +69,8 @@ class DepartementController extends Controller
      */
     public function show(Departement $departement)
     {
-        //
+        $active = 'departement';
+        return view('departement.show',  compact('active', 'departement'));
     }
 
     /**
@@ -45,7 +78,9 @@ class DepartementController extends Controller
      */
     public function edit(Departement $departement)
     {
-        //
+        $divisions = Division::all();
+        $active = 'departement';
+        return view('departement.edit', compact('active', 'divisions', 'departement'));
     }
 
     /**
@@ -53,7 +88,35 @@ class DepartementController extends Controller
      */
     public function update(Request $request, Departement $departement)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'division_id' => 'required',
+            'urutan' => 'required|integer',
+            'deskripsi' => 'nullable|string|max:255',
+            'singkatan' => 'nullable|string|max:255',
+        ]);
+
+        // Ambil data yang ada di tabel blogs berdasarkan id
+        $division = DB::table('departements')->where('id', $departement->id)->first();
+
+        if (!$division) {
+            return redirect()->back()->withErrors('division not found!');
+        }
+        // Siapkan data yang akan diperbarui
+        $data = [
+            'nama' => $request->nama,
+            'division_id' => $request->division_id,
+            'urutan' => $request->urutan,
+            'deskripsi' => $request->deskripsi,
+            'singkatan' => $request->singkatan,
+            'updated_at' => now(),
+        ];
+
+        // Update data produk di database
+        DB::table('departements')->where('id', $departement->id)->update($data);
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'departement updated successfully!');
     }
 
     /**
@@ -61,6 +124,13 @@ class DepartementController extends Controller
      */
     public function destroy(Departement $departement)
     {
-        //
+        if (!$departement) {
+            return redirect()->back()->withErrors('departement not found!');
+        }
+        // Hapus produk dari database
+        DB::table('departements')->where('id', $departement->id)->delete();
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'departement deleted successfully!');
     }
 }

@@ -34,19 +34,19 @@
                     <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi Divisi:</label>
                     <input type="text" id="deskripsi" name="deskripsi"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('deskripsi', $division->deskripsi) }}" required>
+                        value="{{ old('deskripsi', $division->deskripsi) }}">
                 </div>
 
                 <div class="mb-4">
-                    <label for="singaktan" class="block text-gray-700 font-bold mb-2">Singaktan:</label>
-                    <input type="text" id="singaktan" name="singaktan"
+                    <label for="singkatan" class="block text-gray-700 font-bold mb-2">Singkatan:</label>
+                    <input type="text" id="singkatan" name="singkatan"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('singaktan', $division->singkatan) }}" required>
+                        value="{{ old('singkatan', $division->singkatan) }}">
                 </div>
 
                 <div class="text-center">
                     <button type="submit"
-                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Update</button>
                 </div>
             </form>
         </div>

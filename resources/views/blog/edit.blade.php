@@ -63,7 +63,7 @@
 
                 <div class="text-center">
                     <button type="submit"
-                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Update</button>
                 </div>
             </form>
         </div>

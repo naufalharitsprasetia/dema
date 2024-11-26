@@ -12,9 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('anggota_departements', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
+            $table->foreignUuid('departement_id')->constrained()->onDelete('cascade');
             $table->string('nama');
-            $table->string('bagian');
+            $table->string('urutan');
+            $table->string('prodi');
+            $table->string('asal')->nullable();
             $table->timestamps();
         });
     }
