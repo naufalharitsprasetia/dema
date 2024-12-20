@@ -84,6 +84,32 @@
                 </div>
             </div>
 
+            <!-- Anggota Departement Card -->
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <div class="flex items-center">
+                    <div class="text-violet-500 bg-violet-100 p-4 rounded-full">
+                        <!-- Icon here -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 011-1h12a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3zm10 3a1 1 0 10-2 0v4a1 1 0 102 0V6zm-4 0a1 1 0 10-2 0v4a1 1 0 102 0V6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-gray-600">Jumlah Anggota Departement</p>
+                        <p class="text-2xl font-bold">{{ count($anggota_departements) }}</p>
+                    </div>
+                </div>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <a href="/anggota_departement-create"
+                        class="bg-violet-500 text-white px-4 py-2 rounded hover:bg-violet-700 block">Buat
+                        Anggota Departement Baru</a>
+                    <a href="/anggota_departement"
+                        class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                        Anggota Departement</a>
+                </div>
+            </div>
+
             <!-- UKM Card -->
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <div class="flex items-center">

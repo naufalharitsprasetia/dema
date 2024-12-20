@@ -1,65 +1,129 @@
-?php
+<?php
 
 namespace App\Http\Controllers;
 
 use App\Models\AnggotaDepartement;
+use App\Models\Departement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class AnggotaDepartementController extends Controller
 {
-/**
-* Display a listing of the resource.
-*/
-public function index()
-{
-//
-}
+    /**
+     *   $table->foreignUuid('departement_id')->constrained()->onDelete('cascade');
+     *   $table->string('nama');
+     *   $table->string('urutan');
+     *   $table->string('prodi');
+     *   $table->string('asal')->nullable(); 
+     **/
 
-/**
-* Show the form for creating a new resource.
-*/
-public function create()
-{
-//
-}
+    public function index()
+    {
+        $active = 'anggota_departement';
+        $anggota_departements = AnggotaDepartement::orderBy('urutan', 'asc')->get();
+        return view('anggota_departement.index',  compact('active', 'anggota_departements'));
+    }
 
-/**
-* Store a newly created resource in storage.
-*/
-public function store(Request $request)
-{
-//
-}
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        $departements = Departement::all();
+        $active = 'anggota_departement';
+        return view('anggota_departement.create', compact('active', 'departements'));
+    }
 
-/**
-* Display the specified resource.
-*/
-public function show(AnggotaDepartement $anggotaDepartement)
-{
-//
-}
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'departement_id' => 'required',
+            'urutan' => 'required|integer',
+            'prodi' => 'string|max:255',
+            'asal' => 'nullable|string|max:255',
+        ]);
 
-/**
-* Show the form for editing the specified resource.
-*/
-public function edit(AnggotaDepartement $anggotaDepartement)
-{
-//
-}
+        $data = [
+            'id' => Str::uuid(),
+            'nama' => $request->nama,
+            'departement_id' => $request->departement_id,
+            'urutan' => $request->urutan,
+            'prodi' => $request->prodi,
+            'asal' => $request->asal,
+            'created_at' => now(),
+        ];
 
-/**
-* Update the specified resource in storage.
-*/
-public function update(Request $request, AnggotaDepartement $anggotaDepartement)
-{
-//
-}
+        DB::table('anggota_departements')->insert($data);
 
-/**
-* Remove the specified resource from storage.
-*/
-public function destroy(AnggotaDepartement $anggotaDepartement)
-{
-//
-}
+        return redirect()->route('dashboard')->with('success', 'new anggota-departement created successfully!');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    // public function show(AnggotaDepartement $anggotaDepartement)
+    // {
+    //     $active = 'departement';
+    //     return view('departement.show',  compact('active', 'departement'));
+    // }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(AnggotaDepartement $anggotaDepartement)
+    {
+        $departements = Departement::all();
+        $active = 'anggota_departement';
+        return view('anggota_departement.edit', compact('active', 'departements', 'anggotaDepartement'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, AnggotaDepartement $anggotaDepartement)
+    {
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'departement_id' => 'required',
+            'urutan' => 'required|integer',
+            'prodi' => 'string|max:255',
+            'asal' => 'nullable|string|max:255',
+        ]);
+
+        // Siapkan data yang akan diperbarui
+        $data = [
+            'nama' => $request->nama,
+            'departement_id' => $request->departement_id,
+            'urutan' => $request->urutan,
+            'prodi' => $request->prodi,
+            'asal' => $request->asal,
+            'updated_at' => now(),
+        ];
+
+        // Update data produk di database
+        DB::table('anggota_departements')->where('id', $anggotaDepartement->id)->update($data);
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'anggota departement updated successfully!');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(AnggotaDepartement $anggotaDepartement)
+    {
+        if (!$anggotaDepartement) {
+            return redirect()->back()->withErrors('anggota departement not found!');
+        }
+        // Hapus produk dari database
+        DB::table('anggota_departements')->where('id', $anggotaDepartement->id)->delete();
+
+        // Redirect kembali dengan pesan sukses
+        return redirect()->route('dashboard')->with('success', 'anggota departement deleted successfully!');
+    }
 }

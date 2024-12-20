@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnggotaDepartementController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DepartementController;
@@ -73,6 +74,13 @@ Route::middleware('auth')->group(
         Route::get('/departement-edit/{departement}', [DepartementController::class, 'edit'])->name('departement.edit');
         Route::put('/departement-edit/{departement}', [DepartementController::class, 'update'])->name('departement.update');
         Route::delete('/departement-delete/{departement}', [DepartementController::class, 'destroy'])->name('departement.destroy');
+        // Anggota Departement
+        Route::get('/anggota_departement', [AnggotaDepartementController::class, 'index'])->name('anggota_departement.index');
+        Route::get('/anggota_departement-create', [AnggotaDepartementController::class, 'create'])->name('anggota_departement.create');
+        Route::post('/anggota_departement-create', [AnggotaDepartementController::class, 'store'])->name('anggota_departement.store');
+        Route::get('/anggota_departement-edit/{anggotaDepartement}', [AnggotaDepartementController::class, 'edit'])->name('anggota_departement.edit');
+        Route::put('/anggota_departement-edit/{anggotaDepartement}', [AnggotaDepartementController::class, 'update'])->name('anggota_departement.update');
+        Route::delete('/anggota_departement-delete/{anggotaDepartement}', [AnggotaDepartementController::class, 'destroy'])->name('anggota_departement.destroy');
         // UKM
         Route::get('/ukm-list', [UKMController::class, 'list'])->name('ukm.list');
         Route::get('/ukm-create', [UKMController::class, 'create'])->name('ukm.create');

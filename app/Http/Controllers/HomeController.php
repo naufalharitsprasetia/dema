@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AnggotaDepartement;
 use App\Models\Blog;
 use App\Models\UKM;
 use App\Models\Departement;
@@ -49,6 +50,7 @@ class HomeController extends Controller
         $divisions = Division::all();
         $departements = Departement::all();
         $ukms = UKM::all();
-        return view('admin.dashboard', compact('active', 'blogs', 'divisions', 'departements', 'ukms'));
+        $anggota_departements = AnggotaDepartement::all();
+        return view('admin.dashboard', compact('active', 'blogs', 'divisions', 'departements', 'ukms', 'anggota_departements'));
     }
 }
