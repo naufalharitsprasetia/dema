@@ -64,7 +64,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'judul' => 'required|string|max:255',
+            'judul' => 'required|string|max:25',
             'isi' => 'required|string',
             'link_dokumentasi' => 'nullable|string',
             'image' => 'image|max:5000',
@@ -112,7 +112,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $request->validate([
-            'judul' => 'required|string|max:255',
+            'judul' => 'required|string|max:25',
             'isi' => 'required|string',
             'link_dokumentasi' => 'nullable|string',
             'image' => 'image|max:5000',
