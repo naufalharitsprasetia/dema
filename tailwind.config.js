@@ -15,6 +15,7 @@ export default {
         fifth: "#01131E",
         sixth: "#FF6614",
         seventh: "#77FFF6",
+        dema: "#16AEBC",
       },
       fontFamily: {
         arabic: ["arabic-lpmq"],
@@ -24,6 +25,7 @@ export default {
         poppins: ["Poppins"],
         montserrat: ["Montserrat"],
         montaga: ["Montaga"],
+        jakarta: ["Plus Jakarta Sans"],
       },
     },
   },
