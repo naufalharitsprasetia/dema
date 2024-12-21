@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- DEPARTEMENT index --}}
-    <div class="departement-section text-secondary" style="background: linear-gradient(120deg, #0065A9 0%, #002843 87.07%);">
+    <div class="departement-section text-primary">
         <div class="departement max-w-7xl mx-auto py-16 text-center ">
             <h1 class="text-5xl font-bold text-center">Our Departements</h1>
             <div class="divisons-group mt-5 font-poppins mx-28">
@@ -16,9 +16,9 @@
                                 $firstWord = $words[0];
                                 $remainingWords = implode(' ', array_slice($words, 1));
                             @endphp
-                            <span class="text-seventh">{{ $firstWord }}</span> {{ $remainingWords }}
+                            <span class="text-third">{{ $loop->iteration }}. {{ $firstWord }}</span> {{ $remainingWords }}
                         </h2>
-                        <div class="flex flex-wrap md:flex-nowrap gap-4 justify-around">
+                        <div class="flex flex-wrap md:flex-nowrap gap-4 ">
                             @foreach ($division->departements as $departement)
                                 <a href="/departement/{{ $departement->id }}"
                                     class="rounded-xl bg-secondary text-primary font-semibold px-8 py-3">{{ $departement->nama }}</a>
