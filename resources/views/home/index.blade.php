@@ -1,28 +1,54 @@
 @extends('layout.main')
 
 @section('content')
+    <style>
+        .aurora-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .aurora {
+            position: absolute;
+            width: 30rem;
+            height: 30rem;
+            background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
+            opacity: 0.2;
+            filter: blur(100px);
+            border-radius: 9999px;
+        }
+    </style>
     {{-- Hero Section --}}
-    <div class="min-h-svh bg-center flex justify-center items-end"
-        style="background-image: url('/img/unidabg.jpg'); background-size: cover; background-repeat: no-repeat">
-        {{-- <div class="mx-auto">
-            <img class="w-96 mt-8" src="/img/logodema.png" alt="">
-        </div> --}}
-        <div class="text-center flex flex-col justify-center items-center text-secondary p-3 md:p-8 rounded-tl-xl rounded-tr-xl shadow-lg"
-            style="background: linear-gradient(115deg, rgba(0, 104, 174, 0.93) 3.21%, rgba(0, 17, 28, 0.93) 64.41%);">
+    <div class="min-h-svh flex justify-center items-center bg-secondary">
+        {{-- Aurora --}}
+        <div class="aurora-bg -z-10">
+            <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>
+            <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[20rem] right-[85%]"></div>
+            <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[-10rem] left-[70%]"></div>
+        </div>
+        {{-- End Aurora --}}
+
+        {{-- main Content --}}
+        <div class="text-center flex flex-col justify-center items-center text-dema p-3 md:p-8 z-20">
             <div class="flex my-4">
                 <img class="w-44 md:w-52" src="/img/logodema.png" alt="">
             </div>
             {{-- <span class="mt-6 uppercase text-sm">Website Resmi</span> --}}
-            <h1 class="mt-3 md:mt-6 font-montserrat font-[800] uppercase text-3xl md:text-5xl tracking-widest">Dewan
+            <h1 class="mt-3 md:mt-6 font-jakarta font-[800] uppercase text-3xl md:text-5xl"
+                style="text-shadow: 0px 0px 12px rgb(85 241 255);letter-spacing: 5.76px;line-height: 96.965%;">
+                Dewan
                 <br>Mahasiswa
             </h1>
         </div>
     </div>
+
     {{-- Kabinet Section --}}
     <div class="kabinet-section bg-secondary bg-cover" style="background-image: url('/img/tulisanhadisatya.png')">
         <div class="kabinet flex flex-col max-w-7xl mx-auto pt-16 text-center justify-center">
             <div class="">
-                <h1 class="font-montaga text-5xl font-bold drop-shadow-lg text-primary">KABINET HADISATYA</h1>
+                <h1 class="font-jakarta text-5xl font-bold drop-shadow-lg text-primary">KABINET HADISATYA</h1>
             </div>
         </div>
         <div class="mx-auto">

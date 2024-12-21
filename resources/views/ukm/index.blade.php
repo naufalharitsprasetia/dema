@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- ukm --}}
-    <div class="ukm-section bg-gray-50 text-primary">
+    <div class="ukm-section text-primary">
         <div class="ukm max-w-7xl mx-auto py-16 px-10">
             <h1 class="text-5xl font-bold text-center mb-4">Unit Kegiatan Mahasiswa (UKM)</h1>
             {{-- <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1> --}}
@@ -24,36 +24,38 @@
                     ukm menjadi 22 unit kegiatan mahasiswa.</blockquote>
                 <br>
 
-                <div class="my-2">
-                    <h3 class="font-semibold text-2xl">Olah Pikir</h3>
-                    <p class="mt-1"><strong>Olah Fikir</strong> Olah fikir merupakan sebuah aktivitas yang membentuk
+                <div class="my-2 text-center">
+                    <h3 class="font-semibold text-xl bg-secondary inline-block p-2 rounded-md">Olah Fikir</h3>
+                    <p class="mt-1 text-left"><strong>Olah Fikir</strong> Olah fikir merupakan sebuah aktivitas yang
+                        membentuk
                         mahasiswa
                         dalam
                         hal kenseptual, persepsi dan informasi,
                         dalam meningkatkan potensi berpendapat, dan menuliskan pikirannya dalam gagasan dan
                         kelimuannya.</p>
                 </div>
-                <div class="my-2">
-                    <h3 class="font-semibold text-2xl">Olah Rasa</h3>
-                    <p class="mt-1"> <strong>Olah rasa</strong> kegiatan yang melatih
+                <div class="my-4 text-center">
+                    <h3 class="font-semibold text-xl bg-secondary inline-block p-2 rounded-md">Olah Rasa</h3>
+                    <p class="mt-1 text-left"> <strong>Olah rasa</strong> kegiatan yang melatih
                         kemampuan mahasiswa dalam berkesenian dan berkebudayaan kemudian
                         dimanifestasikan menjadi sebuah mahakarya yang berkualitas. seni yang dilatih pun merupakan
                         seni
                         murni dan
                         seni terapan yang dapat dirasakan dari nilai keindahan.</p>
                 </div>
-                <div class="my-2">
-                    <h3 class="font-semibold text-2xl">Olah Dzikir</h3>
-                    <p class="mt-1"><strong>Olah Dzikir</strong> Olah Dzikir merupakan unsur yang paling diutamakan dalam
+                <div class="my-4 text-center">
+                    <h3 class="font-semibold text-xl bg-secondary inline-block p-2 rounded-md">Olah Dzikir</h3>
+                    <p class="mt-1 text-left"><strong>Olah Dzikir</strong> Olah Dzikir merupakan unsur yang paling
+                        diutamakan dalam
                         kehidupan
                         mahasiswa untuk mengasah jiwa spritual, kegiatan ini bentuk integritas antara kegiatan
                         rohani
                         dan jasmani mahasiswa dengan menjadikan
                         nilai agama sebagai landasan.</p>
                 </div>
-                <div class="my-2">
-                    <h3 class="font-semibold text-2xl">Olah Raga</h3>
-                    <p class="mt-1"><strong>Olah Raga</strong> merupakan aktivitas jasmani yang
+                <div class="my-4 text-center">
+                    <h3 class="font-semibold text-xl bg-secondary inline-block p-2 rounded-md">Olah Raga</h3>
+                    <p class="mt-1 text-left"><strong>Olah Raga</strong> merupakan aktivitas jasmani yang
                         dilakukan untuk melatih kegiatan fisik secara terprogram dengan
                         tujuan meningkatkan keterampilan nilai-nilai fungsional yang mencakup aspek kognitif,
                         efektif,

@@ -1,26 +1,25 @@
-<nav class="z-50 w-full fixed bg-primary">
+<nav class="z-50 w-full fixed transition ease-in-out" id="myNavbar">
+    {{-- sebenernya ada add remove bg-secondary/70 di .js nya --}}
+    <div class="bg-secondary/80 backdrop-blur"></div>
     <div class="mx-auto max-w-7xl px-2 lg:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
-                <div class="absolute z-[999] top-0 left-4 hidden md:block">
-                    <img class="h-[4rem] md:h-[6rem] w-auto" src="/img/logodemanavbar.png" alt="Your Company">
-                </div>
-                <div class="flex flex-shrink-0 items-center  md:ml-28">
-                    <img class="h-[4rem] md:h-[6rem] w-auto md:hidden" src="/img/logodemanavbar.png" alt="Your Company">
-                    <h2 class="mx-3 md:mx-4 text-secondary font-poppins font-semibold text-base md:text-lg">DEMA UNIDA
+                <div class="flex flex-shrink-0 items-center md:ml-28">
+                    <img src="/img/logodema.png" alt="Logo Dema" class="w-10">
+                    <h2 class="mx-3 md:mx-4 text-black font-jakarta font-semibold text-base md:text-lg">DEMA UNIDA
                         GONTOR
                     </h2>
                 </div>
                 <div class="hidden lg:ml-6 lg:block">
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'beranda' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }} ">Beranda</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'beranda' ? 'text-dema' : 'text-black hover:text-dema' }} ">Home</a>
                         <a href="/departement"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'departement' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">Departement</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'departement' ? 'text-dema' : 'text-black hover:text-dema' }}">Departement</a>
                         <a href="/ukm"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'ukm' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">UKM</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'ukm' ? 'text-dema' : 'text-black hover:text-dema' }}">UKM</a>
                         <a href="/blog"
-                            class="rounded-md px-3 py-2 text-sm font-medium {{ $active == 'blog' ? 'bg-third text-white' : 'text-secondary hover:bg-third hover:text-white' }}">PRESS
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'blog' ? 'text-dema' : 'text-black hover:text-dema' }}">PRESS
                             RELEASE</a>
                     </div>
                 </div>
@@ -54,11 +53,11 @@
                 <div class="relative ml-3">
                     <div>
                         <button type="button"
-                            class="relative flex max-w-xs items-center rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 hover:bg-third hover:text-white group"
+                            class="relative flex max-w-xs items-center rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-dema focus:ring-offset-2 focus:ring-offset-dema hover:text-dema group"
                             aria-expanded="false" aria-haspopup="true">
                             <span class="absolute -inset-1.5" id="user-menu-button"></span>
                             <span class="sr-only">Open user menu</span>
-                            <span class="text-secondary font-semibold px-3 py-2 group-hover:text-white">Lainnya</span>
+                            <span class="text-black font-normal px-3 py-2 group-hover:text-dema">Other Menu</span>
                         </button>
                     </div>
                     <!-- Dropdown menu *(lainnya) -->
@@ -66,12 +65,13 @@
                         role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
                         {{-- lainnya --}}
                         <a href="/about"
-                            class="text-center block px-4 py-2 text-sm {{ $active == 'about' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Tentang
-                            Kami</a>
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'about' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">About
+                            Us</a>
                         <a href="/contact"
-                            class="text-center block px-4 py-2 text-sm {{ $active == 'contact' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Kontak</a>
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'contact' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Contact
+                            US</a>
                         <a href="/faq"
-                            class="text-center block px-4 py-2 text-sm {{ $active == 'faq' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">Faq</a>
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'faq' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">FAQ</a>
                         {{-- Admin --}}
                         @auth
                             <hr class="border-2 border-primary">
@@ -100,17 +100,18 @@
         <div class="space-y-1 px-2 pb-3 pt-2 lg:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/"
-                class="block rounded-md px-3 py-2 text-base font-medium  {{ $active == 'beranda' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Beranda</a>
+                class="block rounded-md px-3 py-2 text-base font-medium  {{ $active == 'beranda' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Home</a>
             <a href="/blog"
                 class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'blog' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-Press Releasehover:text-white' }}">Press
                 Release</a>
             <a href="/departement"
                 class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'departement' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Departemen</a>
             <a href="/about"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Tentang</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'about' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Abous
+                Us</a>
             <a href="/lainnya"
-                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'lainnya' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">Halaman
-                Lainnya</a>
+                class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'lainnya' ? 'bg-gray-900 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}">
+                Other Menu</a>
         </div>
         @auth
             <div class="border-t border-gray-700 pb-3 pt-4">

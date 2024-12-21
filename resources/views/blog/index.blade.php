@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- Artikel Index --}}
-    <div class="artikel-section bg-gray-200 text-primary">
+    <div class="artikel-section text-primary">
         <div class="artikel max-w-7xl mx-auto py-12 pb-6 text-center ">
             {{-- <h1 class="text-5xl font-bold text-center">PRESS RELEASE</h1> --}}
             <h2 class="text-lg font-bold uppercase tracking-wide bg-black text-white inline-block px-2 py-1">Berita
@@ -38,6 +38,7 @@
                     <!-- Berita Utama 1 -->
                     <a href="/blog/{{ $beritaUtama1->id }}" class="relative col-span-2 row-span-2 overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/' . $beritaUtama1->image) }}" alt="{{ $beritaUtama1->judul }}"
+                            loading="lazy"
                             class="w-full h-full object-cover transform transition-transform hover:scale-110 duration-300 ease-in-out">
                         <div
                             class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
@@ -52,6 +53,7 @@
                     <!-- Berita Utama 2 -->
                     <a href="/blog/{{ $beritaUtama2->id }}" class="relative col-span-2 overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/' . $beritaUtama2->image) }}" alt="{{ $beritaUtama2->judul }}"
+                            loading="lazy"
                             class="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
                         <div
                             class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
@@ -67,7 +69,7 @@
                         <!-- Kartu Berita Lainnya -->
                         <a href="/blog/{{ $blog->id }}"
                             class="relative overflow-hidden rounded-lg col-span-2 md:col-span-1">
-                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}"
+                            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->judul }}" loading="lazy"
                                 class="lg:w-[300px] lg:h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out">
                             <div
                                 class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">

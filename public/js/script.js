@@ -69,6 +69,7 @@ function confirmLogout() {
 
 // Get the button
 let mybutton = document.getElementById("myBtnTop");
+let myNavbar = document.getElementById("myNavbar");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -76,8 +77,10 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
+    myNavbar.classList.add("bg-secondary/80", "backdrop-blur");
   } else {
     mybutton.style.display = "none";
+    myNavbar.classList.remove("bg-secondary/80", "backdrop-blur");
   }
 }
 // When the user clicks on the button, scroll to the top of the document

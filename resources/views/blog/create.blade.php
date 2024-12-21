@@ -26,10 +26,11 @@
             <form action="/blog-create" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-4">
-                    <label for="judul" class="block text-gray-700 font-bold mb-2">Judul:</label>
+                    <label for="judul" class="block text-gray-700 font-bold mb-2">Judul (max 25 karakter termasuk
+                        spasi):</label>
                     <input type="text" id="judul" name="judul"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('judul') }}" required>
+                        value="{{ old('judul') }}" required maxlength="25">
                 </div>
 
                 <div class="mb-4">
