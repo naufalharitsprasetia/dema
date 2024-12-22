@@ -21,7 +21,7 @@
         }
     </style>
     {{-- Hero Section --}}
-    <div class="min-h-svh flex justify-center items-center bg-secondary">
+    <div class="min-h-svh flex justify-center items-center">
         {{-- Aurora --}}
         <div class="aurora-bg -z-10">
             <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>

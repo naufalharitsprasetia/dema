@@ -1,6 +1,6 @@
 <nav class="z-50 w-full fixed transition ease-in-out" id="myNavbar">
     {{-- sebenernya ada add remove bg-secondary/70 di .js nya --}}
-    <div class="bg-secondary/80 backdrop-blur"></div>
+    <div class="bg-white/80 backdrop-blur hidden"></div>
     <div class="mx-auto max-w-7xl px-2 lg:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
@@ -13,13 +13,13 @@
                 <div class="hidden lg:ml-6 lg:block">
                     <div class="ml-10 flex gap-6 items-center">
                         <a href="/"
-                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'beranda' ? 'text-dema' : 'text-black hover:text-dema' }} ">Home</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'beranda' ? 'underline' : 'hover:text-dema' }} ">Home</a>
                         <a href="/departement"
-                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'departement' ? 'text-dema' : 'text-black hover:text-dema' }}">Departement</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'departement' ? 'underline' : 'hover:text-dema' }}">Departement</a>
                         <a href="/ukm"
-                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'ukm' ? 'text-dema' : 'text-black hover:text-dema' }}">UKM</a>
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'ukm' ? 'underline' : 'hover:text-dema' }}">UKM</a>
                         <a href="/blog"
-                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'blog' ? 'text-dema' : 'text-black hover:text-dema' }}">PRESS
+                            class="rounded-md px-3 py-2 text-sm font-normal {{ $active == 'blog' ? 'underline' : 'hover:text-dema' }}">PRESS
                             RELEASE</a>
                     </div>
                 </div>

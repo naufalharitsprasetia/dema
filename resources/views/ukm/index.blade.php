@@ -3,7 +3,7 @@
 @section('content')
     {{-- ukm --}}
     <div class="ukm-section text-primary">
-        <div class="ukm max-w-7xl mx-auto py-16 px-10">
+        <div class="ukm max-w-7xl mx-auto pt-10 pb-14 px-10">
             <h1 class="text-5xl font-bold text-center mb-4">Unit Kegiatan Mahasiswa (UKM)</h1>
             {{-- <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1> --}}
             <div class="penjelasan-ukm p-4">

@@ -77,10 +77,10 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
-    myNavbar.classList.add("bg-secondary/80", "backdrop-blur");
+    myNavbar.classList.add("bg-white/80", "backdrop-blur");
   } else {
     mybutton.style.display = "none";
-    myNavbar.classList.remove("bg-secondary/80", "backdrop-blur");
+    myNavbar.classList.remove("bg-white/80", "backdrop-blur");
   }
 }
 // When the user clicks on the button, scroll to the top of the document
