@@ -1,8 +1,7 @@
 {{-- Footer --}}
 <!-- Footer Section -->
-<footer class="bg-primary text-secondary p-6 ">
-    <div
-        class="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-evenly items-center">
+<footer class="text-primary p-6 ">
+    <div class="container max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto flex flex-col md:flex-row flex-wrap md:flex-nowrap justify-evenly items-center">
         <!-- Left Section: Logo and Details -->
         <div class="flex items-center space-x-4">
             <img src="/img/logodema.png" alt="Logo" class="w-16">
@@ -16,7 +15,7 @@
         <div class="mid-footer flex flex-col">
             <h4 class="font-semibold text-lg my-4">Follow Us on Social Media</h4>
             <div class="flex mx-auto gap-4">
-                <a href="">
+                <a href="https://www.instagram.com/sc_unidagontor/" target="_blank">
                     <img class="w-8" src="/img/instagram.png" alt="">
                 </a>
                 <a href="">
@@ -50,12 +49,14 @@
 </footer>
 @vite('resources/js/app.js')
 {{-- Javascript --}}
-@stack('scripts') <!-- Stack untuk scripts di akhir body -->
+@stack('scripts')
+<!-- Stack untuk scripts di akhir body -->
 {{-- @push('scripts') --}}
 {{-- AOS --}}
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+
 </script>
 {{-- Scripts --}}
 <script src="/js/script.js"></script>

@@ -23,6 +23,6 @@ class Division extends Model
 
     public function departements()
     {
-        return $this->hasMany(Departement::class, 'division_id', 'id');
+        return $this->hasMany(Departement::class, 'division_id', 'id')->orderBy('urutan', 'asc');
     }
 }

@@ -16,7 +16,8 @@ class UKMController extends Controller
     public function index()
     {
         $active = 'ukm';
-        return view('ukm.index',  compact('active'));
+        $ukms = UKM::all()->groupBy('kategori');
+        return view('ukm.index', compact('active', 'ukms'));
     }
 
     /**
@@ -42,10 +43,10 @@ class UKMController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'kategori' => 'required|string|max:255',
-            'deskripsi' => 'required|string|max:1000',
+            'deskripsi' => 'nullable|string|max:1000',
             'jumlah_anggota' => 'nullable|string|max:255',
             'link_sosmed' => 'nullable|string|max:255',
-            'logo' => 'image|max:5000',
+            'logo' => 'required|image|max:5000',
         ]);
 
         $data = [
@@ -73,7 +74,7 @@ class UKMController extends Controller
     public function show(UKM $uKM)
     {
         $active = 'ukm';
-        return view('ukm.index',  compact('active', 'uKM'));
+        return view('ukm.index', compact('active', 'uKM'));
     }
 
     /**
@@ -93,14 +94,16 @@ class UKMController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'kategori' => 'required|string|max:255',
-            'deskripsi' => 'required|string|max:1000',
+            'deskripsi' => 'nullable|string|max:1000',
             'jumlah_anggota' => 'nullable|string|max:255',
             'logo' => 'image|max:5000',
             'link_sosmed' => 'nullable|string|max:255',
         ]);
 
         // Ambil data yang ada di tabel blogs berdasarkan id
-        $ukm = DB::table('u_k_m_s')->where('id', $uKM->id)->first();
+        $ukm = DB::table('u_k_m_s')
+            ->where('id', $uKM->id)
+            ->first();
 
         if (!$ukm) {
             return redirect()->back()->withErrors('ukm not found!');
@@ -125,7 +128,9 @@ class UKMController extends Controller
         }
 
         // Update data produk di database
-        DB::table('u_k_m_s')->where('id', $ukm->id)->update($data);
+        DB::table('u_k_m_s')
+            ->where('id', $ukm->id)
+            ->update($data);
 
         // Redirect kembali dengan pesan sukses
         return redirect()->route('dashboard')->with('success', 'ukm updated successfully!');
@@ -140,7 +145,9 @@ class UKMController extends Controller
             return redirect()->back()->withErrors('ukm not found!');
         }
         // Hapus produk dari database
-        DB::table('u_k_m_s')->where('id', $uKM->id)->delete();
+        DB::table('u_k_m_s')
+            ->where('id', $uKM->id)
+            ->delete();
 
         // Redirect kembali dengan pesan sukses
         return redirect()->route('dashboard')->with('success', 'ukm deleted successfully!');

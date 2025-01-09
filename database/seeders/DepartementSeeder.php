@@ -34,7 +34,7 @@ class DepartementSeeder extends Seeder
             'division_id' => $divisi1->id,
             'nama' => 'Sekretaris',
             'singkatan' => '',
-            'urutan' => 1
+            'urutan' => 2
         ]);
 
         Departement::create([
@@ -68,5 +68,6 @@ class DepartementSeeder extends Seeder
             'singkatan' => '',
             'urutan' => 1
         ]);
+        // Anggota Departement
     }
 }

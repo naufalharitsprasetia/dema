@@ -26,18 +26,18 @@ class UKMSeeder extends Seeder
             'id' => Str::uuid(),
             'nama' => 'Futsalisty',
             'deskripsi' => '',
-            'kategori' => 'olahraga',
+            'kategori' => 'Olah Raga',
             'jumlah_anggota' => 20,
-            'logo' => 'futsal.png',
+            'logo' => 'ukms/futsal.jpeg',
             'link_sosmed' => '',
         ]);
         UKM::create([
             'id' => Str::uuid(),
             'nama' => 'Luqmanul Hakim',
             'deskripsi' => '',
-            'kategori' => 'olah fikir',
+            'kategori' => 'Olah Pikir',
             'jumlah_anggota' => 20,
-            'logo' => 'luqmanulhakim.png',
+            'logo' => 'ukms/luqmanulhakim.jpeg',
             'link_sosmed' => '',
         ]);
     }

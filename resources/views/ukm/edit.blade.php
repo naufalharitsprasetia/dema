@@ -29,10 +29,12 @@
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required>
                         <option value="">Pilih Kategori Olah:</option>
-                        <option value="Olah Rasa">Olah Rasa</option>
-                        <option value="Olah Pikir">Olah Pikir</option>
-                        <option value="Olah Dzikir">Olah Dzikir</option>
-                        <option value="Olah Raga">Olah Raga</option>
+                        <option value="Olah Rasa" {{ $uKM->kategori == 'Olah Rasa' ? 'selected' : '' }}>Olah Rasa</option>
+                        <option value="Olah Pikir" {{ $uKM->kategori == 'Olah Pikir' ? 'selected' : '' }}>Olah Pikir
+                        </option>
+                        <option value="Olah Dzikir" {{ $uKM->kategori == 'Olah Dzikir' ? 'selected' : '' }}>Olah Dzikir
+                        </option>
+                        <option value="Olah Raga" {{ $uKM->kategori == 'Olah Raga' ? 'selected' : '' }}>Olah Raga</option>
                     </select>
                 </div>
 
@@ -40,7 +42,7 @@
                     <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi UKM :</label>
                     <input type="text" id="deskripsi" name="deskripsi"
                         class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value="{{ old('deskripsi', $uKM->deskripsi) }}" required>
+                        value="{{ old('deskripsi', $uKM->deskripsi) }}">
                 </div>
 
                 <div class="mb-4">

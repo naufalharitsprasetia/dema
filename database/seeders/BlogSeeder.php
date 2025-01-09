@@ -34,7 +34,7 @@ Terima kasih kepada semua tim yang telah berkompetisi dengan semangat tinggi dan
 Sampai jumpa di turnamen berikutnya!
 
 ',
-            'image' => 'blogs/r7WzCvcPgwtLVcG77WQva0aNfMWUywGvW80DQVxX.jpg',
+            'image' => 'blogs/qActioMMJj44L6qH0GQ8J7Lr5tYm6CgjnrScEA7y.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/1vvV1wwIrrHezS1isVa-Je4PmDGdfWqR-?usp=sharing',
             'created_at' => '2024-10-26 14:04:28',
             'updated_at' => NULL
@@ -54,7 +54,7 @@ Pada tanggal 18 Agustus 2024 telah terlaksana \"Musyawarah Kerja Dewan Mahasiswa
 Semoga apa yang sudah direncakan bisa terealisasikan dan untuk semua Dewan Mahasiswa baru bisa istiqamah dalam menjalankan amanah ini.
 
 ',
-            'image' => 'blogs/cGEEO4Hd8bruogpaySia96XW9LX3T9CGsZ1PNQ5M.jpg',
+            'image' => 'blogs/zPGoPldn0NfvQWGeU5vvb08cZMwF2VYvnCwEIAX1.jpg',
             'link_dokumentasi' => NULL,
             'created_at' => '2024-10-26 13:49:00',
             'updated_at' => NULL
@@ -76,7 +76,7 @@ Semoga acara Gebyar Kemerdekaan kali ini dapat mempererat tali persaudaraan dan 
 \"Dirgahayu Indonesiaku!\"
 
 ',
-            'image' => 'blogs/P1TCWLForB6EwwQ8xxccb1D0HEAumDK6FKo5KSak.jpg',
+            'image' => 'blogs/bgDgO1A5J05ZJ1RoyVKC3ToQgIQFMeAfv1zTIX6U.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/18WGk9bvIrmYjjOeLWmMJumF3TU0ANRHf?usp=drive_link',
             'created_at' => '2024-10-26 14:48:14',
             'updated_at' => NULL
@@ -99,7 +99,7 @@ Kita adalah penjaga nilai-nilai Pancasila. Semoga semangat ini selalu membara, m
 Jaga Harmoni Bangsa\".
 
 ',
-            'image' => 'blogs/t0H8tQpjnKV2oojIOoL69033itKd2fFYvnV9OVge.jpg',
+            'image' => 'blogs/HFMwqZLcReuc8dG12llXcSgZ5iSuOcIJddJH4dzf.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/19khQcbAno16RvDxfFRClUhAkGd-axuFD?usp=drive_link',
             'created_at' => '2024-10-26 14:52:55',
             'updated_at' => '2024-11-10 07:01:58'
@@ -117,7 +117,7 @@ Halo Bumi Darussalam 👋
 Pada Hari Jum\'at 6 Oktober 2024, Telah dilaksanakan Fun Run UNIDA Gontor. Acara ini bertujuan untuk membentuk mahasiswa yang Sehat dan Produktif. Acara dimulai dari depan Gedung Terpadu dan terus menggelilingi sekitar Desa Brahu
 
 ',
-            'image' => 'blogs/O8oFrVxRoFoNlUCYuY4lBjXked1jCJqrNcMFpKU4.jpg',
+            'image' => 'blogs/QBkbRZcj6EEWWWMaBdGzbBjwMlpzVryIIchZtzAQ.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/1GF0jWAmh6V6sE-0DmHJ1bcQtV3CdHhYe?usp=drive_link',
             'created_at' => '2024-10-26 15:03:57',
             'updated_at' => NULL
@@ -136,10 +136,10 @@ Pada tanggal 17 Agustus 2024 lalu seluruh Mahasiswa Universitas Darussalam Gonto
 
 Di usia ke-79 Republik Indonesia! 79 tahun lalu, bangsa ini meraih kemerdekaan dengan tekad dan perjuangan. Kini, mari kita teruskan semangat itu dengan inovasi dan persatuan, membangun Indonesia yang lebih maju dan bersatu.
 
- 
+
 
 ',
-            'image' => 'blogs/9nCKGLFzJ0FZNQAx2CFM2kY1QO6pQ4Hue6A5GxRE.jpg',
+            'image' => 'blogs/iTTmDXcHf85EvivUE29BmdWvOOHDw8P2iBgQX8Xq.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/13Z6RfkmN81odo-6eatV3y1Epq0b9LIe8?usp=drive_link',
             'created_at' => '2024-10-26 14:01:13',
             'updated_at' => NULL
@@ -165,7 +165,7 @@ Semoga setiap langkah membawa berkah,
 Menuju masa depan yang lebih cerah.
 
 ',
-            'image' => 'blogs/nltUStxr070GuA8LzbVfRUFoJcCfoxyqMAPv4QDF.jpg',
+            'image' => 'blogs/z157TEBaZ2g41C2vgd3kHY7XjfipIwjuJjZKFkds.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/1THI5LsdXIFTBcLUuyxtZiwZ5Zd-0vxcc?usp=drive_link',
             'created_at' => '2024-10-26 15:11:06',
             'updated_at' => NULL
@@ -183,7 +183,7 @@ Halo Bumi Darussalam 👋
 Pada tanggal 25 Agustus 2024 Departemen Pengabdian Masyarakat menggelar acara Gebyar Anak Sholeh dan Sholehah yang terdiri dari 17 TPA Binaan UNIDA Gontor. Kegiatan ini bertujuan untuk menciptakan generasi muda yang aktif, kreatif dan berilmu dalam meningkatkan iman dan taqwa kepada Allah SWT.
 
 ',
-            'image' => 'blogs/8kjJQbXMcKvqb25UkCeK2iigM8Q8nVOqN2PQba0k.jpg',
+            'image' => 'blogs/IiVBHm6mDIiadKCIyD5uoAtlviTrbTkw03GvkK0s.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/11XOV50p5wX1iO_bW7-cP_GjUkGbsHIAj?usp=drive_link',
             'created_at' => '2024-10-26 14:14:16',
             'updated_at' => NULL
@@ -204,7 +204,7 @@ HAVE FUN AND
 ENJOY THE NIGHT WITH HARMONY
 
 ',
-            'image' => 'blogs/jgm8AIfkI2BAq6oXWsEKU1D3efNeFLfAPOYeDVLu.jpg',
+            'image' => 'blogs/jw08cNaZUNhNx4rgFw204r0ZVn128fuJ1wirXjkR.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/1aWUXlNKVMgdQksCB5LZR8pnJIbyYt4RQ?usp=drive_link',
             'created_at' => '2024-10-26 15:09:10',
             'updated_at' => NULL
@@ -221,10 +221,10 @@ Halo Bumi Darussalam 👋
 
 Pada tanggal 15 Agustus 2024 telah terlaksana \"Latihan Dasar Kepemimpinan\" untuk Dewan Mahasiswa Kabinet Hadisatya sebagai langkah awal menuju kepengurusan 1 periode ke depan. Materi disampaikan oleh Al-Ustadz Ahmad Hidayatullah Zarkasyi, M.A, dan Al-Ustadz Assoc Dr. Khalid Muslih, M.A., beliau menyampaikan \"Pemimpin itu diibaratkan sebagai seorang pengemudi yang harus paham betul apa yang dikemudikan nya dan akan dibawa ke tujuan yang mana\". Maka dengan diadakannya acara ini diharapkan untuk para pengurus baru ini bisa lebih membawa Dema Mahasiswa ke arah yang lebih baik lagi.
 
- 
+
 
 ',
-            'image' => 'blogs/I1nxy4m0p3aJ7xLDTKPzkEYWIHP3wuR1y0UzwwfR.jpg',
+            'image' => 'blogs/ukA2viGRGoVqwqwSXOYC1OutOpnCKMIJFXAdkOWh.jpg',
             'link_dokumentasi' => 'https://drive.google.com/drive/folders/1JEFdaxLeElevQN1_xJSf3fnOvz5fVYy5?usp=drive_link',
             'created_at' => '2024-10-26 13:44:21',
             'updated_at' => '2024-10-26 13:45:52'

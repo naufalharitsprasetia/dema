@@ -36,6 +36,7 @@
                     <tr class="text-left">
                         <th class="py-2 md:px-4 border-b border-r text-center">No</th>
                         <th class="py-2 px-4 border-b border-r">Nama UKM</th>
+                        <th class="py-2 md:px-4 border-b border-r text-center">Kategori</th>
                         <th class="py-2 md:px-4 border-b border-r text-center">Deskripsi</th>
                         <th class="py-2 md:px-4 border-b border-r text-center">Jumlah Anggota</th>
                         <th class="py-2 md:px-4 border-b border-r text-center">Link Sosmed</th>
@@ -51,6 +52,9 @@
                                 {{ $loop->iteration }}</td>
                             <td class="py-2 px-4 border-b border-r">
                                 {{ $ukm->nama }}
+                            </td>
+                            <td class="py-2 px-4 border-b border-r">
+                                {{ $ukm->kategori }}
                             </td>
                             <td class="py-2 px-4 border-b border-r">
                                 {{ $ukm->deskripsi }}
