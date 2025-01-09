@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('urutan');
             $table->string('deskripsi')->nullable();
             $table->string('singkatan')->nullable();
+            $table->string('image')->default('');
             $table->timestamps();
         });
     }

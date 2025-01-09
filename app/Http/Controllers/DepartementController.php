@@ -47,6 +47,7 @@ class DepartementController extends Controller
             'urutan' => 'required|integer',
             'deskripsi' => 'nullable|string|max:255',
             'singkatan' => 'nullable|string|max:255',
+            'image' => 'required|image|max:5000',
         ]);
 
         $data = [
@@ -58,6 +59,9 @@ class DepartementController extends Controller
             'singkatan' => $request->singkatan,
             'created_at' => now(),
         ];
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('departements', 'public');
+        }
 
         DB::table('departements')->insert($data);
 
@@ -94,6 +98,7 @@ class DepartementController extends Controller
             'urutan' => 'required|integer',
             'deskripsi' => 'nullable|string|max:255',
             'singkatan' => 'nullable|string|max:255',
+            'image' => 'image|max:5000',
         ]);
 
         // Ambil data yang ada di tabel blogs berdasarkan id
@@ -111,7 +116,14 @@ class DepartementController extends Controller
             'singkatan' => $request->singkatan,
             'updated_at' => now(),
         ];
-
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($ukm->image) {
+                Storage::disk('public')->delete($ukm->image);
+            }
+            // Simpan gambar baru
+            $data['image'] = $request->file('image')->store('departements', 'public');
+        }
         // Update data produk di database
         DB::table('departements')->where('id', $departement->id)->update($data);
 

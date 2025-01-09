@@ -15,7 +15,7 @@ class AnggotaDepartementController extends Controller
      *   $table->string('nama');
      *   $table->string('urutan');
      *   $table->string('prodi');
-     *   $table->string('asal')->nullable(); 
+     *   $table->string('asal')->nullable();
      **/
 
     public function index()
@@ -41,15 +41,19 @@ class AnggotaDepartementController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'nim' => 'required|string|max:50',
             'nama' => 'required|string|max:255',
             'departement_id' => 'required',
             'urutan' => 'required|integer',
             'prodi' => 'string|max:255',
             'asal' => 'nullable|string|max:255',
+            'image' => 'required|image|max:5000',
+
         ]);
 
         $data = [
             'id' => Str::uuid(),
+            'nim' => $request->nim,
             'nama' => $request->nama,
             'departement_id' => $request->departement_id,
             'urutan' => $request->urutan,
@@ -57,6 +61,9 @@ class AnggotaDepartementController extends Controller
             'asal' => $request->asal,
             'created_at' => now(),
         ];
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('members', 'public');
+        }
 
         DB::table('anggota_departements')->insert($data);
 
@@ -88,15 +95,18 @@ class AnggotaDepartementController extends Controller
     public function update(Request $request, AnggotaDepartement $anggotaDepartement)
     {
         $request->validate([
+            'nim' => 'required|string|max:50',
             'nama' => 'required|string|max:255',
             'departement_id' => 'required',
             'urutan' => 'required|integer',
             'prodi' => 'string|max:255',
             'asal' => 'nullable|string|max:255',
+            'image' => 'image|max:5000',
         ]);
 
         // Siapkan data yang akan diperbarui
         $data = [
+            'nim' => $request->nim,
             'nama' => $request->nama,
             'departement_id' => $request->departement_id,
             'urutan' => $request->urutan,
@@ -104,7 +114,14 @@ class AnggotaDepartementController extends Controller
             'asal' => $request->asal,
             'updated_at' => now(),
         ];
-
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($ukm->image) {
+                Storage::disk('public')->delete($ukm->image);
+            }
+            // Simpan gambar baru
+            $data['image'] = $request->file('image')->store('members', 'public');
+        }
         // Update data produk di database
         DB::table('anggota_departements')->where('id', $anggotaDepartement->id)->update($data);
 

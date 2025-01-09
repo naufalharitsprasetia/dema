@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('anggota_departements', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('departement_id')->constrained()->onDelete('cascade');
+            $table->string('nim');
             $table->string('nama');
             $table->string('urutan');
             $table->string('prodi');
             $table->string('asal')->nullable();
+            $table->string('image')->default('');
             $table->timestamps();
         });
     }

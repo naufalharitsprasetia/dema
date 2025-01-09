@@ -27,4 +27,8 @@ class Departement extends Model
     {
         return $this->belongsTo(Division::class, 'division_id', 'id');
     }
+    public function members()
+    {
+        return $this->hasMany(AnggotaDepartement::class, 'departement_id', 'id');
+    }
 }

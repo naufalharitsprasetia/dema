@@ -11,10 +11,12 @@ class AnggotaDepartement extends Model
     protected $fillable = [
         'id',
         'departement_id',
+        'nim',
         'nama',
         'urutan',
         'prodi',
         'asal',
+        'image',
         'created_at',
         'updated_at'
     ];
