@@ -60,7 +60,7 @@ Route::middleware('auth')->group(
         Route::get('/blog-edit/{blog}', [BlogController::class, 'edit'])->name('blog.edit');
         Route::put('/blog-edit/{blog}', [BlogController::class, 'update'])->name('blog.update');
         Route::delete('/blog-delete/{blog}', [BlogController::class, 'destroy'])->name('blog.destroy');
-        // Divisi 
+        // Divisi
         Route::get('/divisi', [DivisionController::class, 'index'])->name('divisi.index');
         Route::get('/divisi-create', [DivisionController::class, 'create'])->name('divisi.create');
         Route::post('/divisi-create', [DivisionController::class, 'store'])->name('divisi.store');

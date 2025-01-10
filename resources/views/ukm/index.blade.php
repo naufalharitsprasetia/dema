@@ -102,7 +102,7 @@
             <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">
                 <img src="{{ asset('storage/' . $ukm->logo) }}" class="w-full" alt="">
                 <h3 class="m-4">{{ $ukm->nama }}</h3>
-                <a href="" class="bg-primary text-secondary rounded-md flex text-center mx-4 mb-2 mt-5 px-3 py-2">Klik
+                <a href="/ukm/{{ $ukm->id }}" class="bg-primary text-secondary rounded-md flex text-center mx-4 mb-2 mt-5 px-3 py-2">Klik
                     Untuk
                     Selengkapnya</a>
             </div>

@@ -74,7 +74,8 @@ class UKMController extends Controller
     public function show(UKM $uKM)
     {
         $active = 'ukm';
-        return view('ukm.index', compact('active', 'uKM'));
+        $ukm = $uKM;
+        return view('ukm.show', compact('active', 'ukm'));
     }
 
     /**
