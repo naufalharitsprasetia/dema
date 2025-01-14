@@ -48,7 +48,7 @@ class DepartementController extends Controller
             'urutan' => 'required|integer',
             'deskripsi' => 'nullable|string|max:255',
             'singkatan' => 'nullable|string|max:255',
-            'image' => 'required|image|max:5000',
+            'image' => 'image|max:5000',
         ]);
 
         $data = [

@@ -29,6 +29,6 @@ class Departement extends Model
     }
     public function members()
     {
-        return $this->hasMany(AnggotaDepartement::class, 'departement_id', 'id');
+        return $this->hasMany(AnggotaDepartement::class, 'departement_id', 'id')->orderBy('urutan', 'asc');
     }
 }
