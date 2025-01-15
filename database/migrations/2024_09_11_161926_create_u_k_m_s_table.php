@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('u_k_m_s', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('nama');
-            $table->string('deskripsi')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->string('kategori');
             $table->string('jumlah_anggota')->nullable();
             $table->string('logo');

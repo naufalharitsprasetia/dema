@@ -1,9 +1,9 @@
 <nav class="z-50 w-full fixed transition ease-in-out" id="myNavbar">
     {{-- sebenernya ada add remove bg-secondary/70 di .js nya --}}
     <div class="bg-white/80 backdrop-blur hidden"></div>
-    <div class="mx-auto max-w-7xl px-2 lg:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl px-2 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
-            <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
+            <div class="flex md:flex-1 mx-auto md:mx-0 items-center justify-center lg:items-stretch lg:justify-start">
                 <div class="flex flex-shrink-0 items-center md:ml-28">
                     <img src="/img/logodema.png" alt="Logo Dema" class="w-10">
                     <h2 class="mx-3 md:mx-4 text-black font-jakarta font-semibold text-base md:text-lg">DEMA UNIDA
@@ -47,7 +47,7 @@
                     </button>
                 </div>
             </div>
-            {{--  --}}
+            {{-- --}}
             <div class="hidden lg:block">
                 <!-- Profile dropdown Button -->
                 <div class="relative ml-3">
@@ -74,18 +74,18 @@
                             class="text-center block px-4 py-2 text-sm {{ $active == 'faq' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}">FAQ</a>
                         {{-- Admin --}}
                         @auth
-                            <hr class="border-2 border-primary">
-                            <a href="/dashboard"
-                                class="text-center block px-4 py-2 text-sm {{ $active == 'dashboard' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}"><i
-                                    class="fa-solid fa-table-columns"></i> Dashboard Admin</a>
-                            {{-- Logout --}}
-                            <form action="/logout" method="POST" id="logout-form">
-                                @csrf
-                                <button type="button" onclick="confirmLogout()"
-                                    class="w-full block px-4 py-2 text-sm text-cyan-700 hover:bg-slate-300 hover:text-cyan-900"
-                                    role="menuitem" tabindex="-1" id="user-menu-item-2"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Sign out</button>
-                            </form>
+                        <hr class="border-2 border-primary">
+                        <a href="/dashboard"
+                            class="text-center block px-4 py-2 text-sm {{ $active == 'dashboard' ? 'bg-slate-300 text-cyan-900' : 'text-cyan-700 hover:bg-slate-300 hover:text-cyan-900' }}"><i
+                                class="fa-solid fa-table-columns"></i> Dashboard Admin</a>
+                        {{-- Logout --}}
+                        <form action="/logout" method="POST" id="logout-form">
+                            @csrf
+                            <button type="button" onclick="confirmLogout()"
+                                class="w-full block px-4 py-2 text-sm text-cyan-700 hover:bg-slate-300 hover:text-cyan-900"
+                                role="menuitem" tabindex="-1" id="user-menu-item-2"><i
+                                    class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+                        </form>
                         @endauth
                     </div>
                 </div>
@@ -114,30 +114,30 @@
                 Other Menu</a>
         </div>
         @auth
-            <div class="border-t border-gray-700 pb-3 pt-4">
-                <div class="flex items-center px-5">
-                    <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="/img/avatar.jpg" alt="">
-                    </div>
-                    <div class="ml-3">
-                        <div class="text-base font-medium leading-none text-gray-500">Nama</div>
-                        <div class="text-sm font-medium leading-none text-gray-500">Email</div>
-                    </div>
+        <div class="border-t border-gray-700 pb-3 pt-4">
+            <div class="flex items-center px-5">
+                <div class="flex-shrink-0">
+                    <img class="h-10 w-10 rounded-full" src="/img/avatar.jpg" alt="">
                 </div>
-                <div class="mt-3 space-y-1 px-2">
-                    <a href="/dashboard"
-                        class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'dashboard' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
-                            class="fa-solid fa-table-columns"></i> Dashboard
-                        Admin</a>
-                    <form action="/logout" method="POST" id="logout-form">
-                        @csrf
-                        <button type="button" onclick="confirmLogout()"
-                            class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-700 hover:text-white"
-                            role="menuitem" tabindex="-1" id="user-menu-item-2"><i
-                                class="fa-solid fa-right-from-bracket"></i> Sign out</button>
-                    </form>
+                <div class="ml-3">
+                    <div class="text-base font-medium leading-none text-gray-500">Nama</div>
+                    <div class="text-sm font-medium leading-none text-gray-500">Email</div>
                 </div>
             </div>
+            <div class="mt-3 space-y-1 px-2">
+                <a href="/dashboard"
+                    class="block rounded-md px-3 py-2 text-base font-medium {{ $active == 'dashboard' ? 'bg-gray-700 text-white' : 'text-gray-500 hover:bg-gray-700 hover:text-white' }}"><i
+                        class="fa-solid fa-table-columns"></i> Dashboard
+                    Admin</a>
+                <form action="/logout" method="POST" id="logout-form">
+                    @csrf
+                    <button type="button" onclick="confirmLogout()"
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-500 hover:bg-gray-700 hover:text-white"
+                        role="menuitem" tabindex="-1" id="user-menu-item-2"><i
+                            class="fa-solid fa-right-from-bracket"></i> Sign out</button>
+                </form>
+            </div>
+        </div>
         @endauth
     </div>
 </nav>

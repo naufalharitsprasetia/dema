@@ -43,7 +43,7 @@ class UKMController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'kategori' => 'required|string|max:255',
-            'deskripsi' => 'nullable|string|max:1000',
+            'deskripsi' => 'nullable|string|max:5000',
             'jumlah_anggota' => 'nullable|string|max:255',
             'link_sosmed' => 'nullable|string|max:255',
             'logo' => 'required|image|max:5000',
@@ -95,7 +95,7 @@ class UKMController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'kategori' => 'required|string|max:255',
-            'deskripsi' => 'nullable|string|max:1000',
+            'deskripsi' => 'nullable|string|max:5000',
             'jumlah_anggota' => 'nullable|string|max:255',
             'logo' => 'image|max:5000',
             'link_sosmed' => 'nullable|string|max:255',

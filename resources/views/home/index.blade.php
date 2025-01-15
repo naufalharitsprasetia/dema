@@ -18,7 +18,6 @@
         filter: blur(100px);
         border-radius: 9999px;
     }
-
 </style>
 {{-- Hero Section --}}
 <div class="min-h-svh flex justify-center items-center">
@@ -36,7 +35,8 @@
             <img class="w-44 md:w-52" src="/img/logodema.png" alt="">
         </div>
         {{-- <span class="mt-6 uppercase text-sm">Website Resmi</span> --}}
-        <h1 class="mt-3 md:mt-6 font-jakarta font-[800] uppercase text-3xl md:text-5xl" style="text-shadow: 0px 0px 12px rgb(85 241 255);letter-spacing: 5.76px;line-height: 96.965%;">
+        <h1 class="mt-3 md:mt-6 font-jakarta font-[800] uppercase text-3xl md:text-5xl"
+            style="text-shadow: 0px 0px 12px rgb(85 241 255);letter-spacing: 5.76px;line-height: 96.965%;">
             Dewan
             <br>Mahasiswa
         </h1>
@@ -106,7 +106,8 @@
 </div>
 {{-- Count Section --}}
 <div class="count-section bg-third text-white">
-    <div class="count flex flex-wrap md:flex-nowrap gap-12 max-w-7xl px-12 py-16 mx-auto justify-center md:justify-between items-center">
+    <div
+        class="count flex flex-wrap md:flex-nowrap gap-12 max-w-7xl px-12 py-16 mx-auto justify-center md:justify-between items-center">
         <div class="count-card text-center">
             <h2 class="font-bold text-5xl">64</h2>
             <span class="font-bold text-xl">Pengurus</span>
@@ -134,17 +135,20 @@
     <div class="artikel flex flex-col md:flex-row max-w-7xl px-12 pt-16 mx-auto">
         <div class="heading-artikel pr-10 mr-8">
             <h2 class="font-semibold text-5xl mb-8">Berita Acara</h2>
-            <img class="w-[750px] h-[300px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4" src="{{ asset('storage/' . $beritaUtama->image) }}" alt="" loading="lazy">
+            <img class="w-[750px] h-[300px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4"
+                src="{{ asset('storage/' . $beritaUtama->image) }}" alt="" loading="lazy">
             <h3 class="font-bold text-3xl">{{ $beritaUtama->judul }}</h3>
             <br>
-            <a href="/blog/{{ $beritaUtama->id }}" class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
+            <a href="/blog/{{ $beritaUtama->id }}"
+                class="text-sixth font-semibold text-xl hover:opacity-85">Selengkapnya >></a>
         </div>
         <div class="mt-6 md:mt-0 kanan-artikel w-full flex flex-wrap pl-8 border-l-4 border-secondary">
             @foreach ($blogs as $blog)
             {{-- card artikel --}}
             <a class="hover:bg-third/80 rounded-lg p-2" href="/blog/{{ $blog->id }}">
                 <div class="card-artikel text-center">
-                    <img class="w-[300px] h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4" src="{{ asset('storage/' . $blog->image) }}" alt="" loading="lazy">
+                    <img class="w-[300px] h-[200px] object-cover transform hover:scale-110 transition-transform duration-300 ease-in-out mb-4"
+                        src="{{ asset('storage/' . $blog->image) }}" alt="" loading="lazy">
                     <span class="font-semibold text-xl mt-3">{{ $blog->judul }}</span>
                 </div>
             </a>
@@ -155,16 +159,19 @@
         <a href="" class="bg-sixth text-white px-2 py-2 rounded-md hover:opacity-85">Artikel Lainnya</a>
     </div>
 </div>
-{{-- Video Profil Section  --}}
+{{-- Video Profil Section --}}
 <div class="video-section bg-secondary bg-cover" style="background-image: url('/img/videocorak.png')">
     <div class="artikel max-w-7xl px-12 pt-12 mx-auto pb-12">
         <div class="mx-auto text-center">
             <h2 class="text-primary text-5xl font-bold">Video Profil</h2>
         </div>
         {{-- <div class="relative w-full pt-[66%] bg-no-repeat bg-center bg-cover" style="background-image: url();">
-            </div> --}}
+        </div> --}}
         <div class="flex justify-center items-center mx-auto pt-8">
-            <iframe width="840" height="460" src="https://www.youtube.com/embed/qkUEztoUfmI?si=FwO1GkjuwgSo0flf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="840" height="460" src="https://www.youtube.com/embed/LkM0EQjiVyM?si=Evdj5ncBUN6EhFIG"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </div>

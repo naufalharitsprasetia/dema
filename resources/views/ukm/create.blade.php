@@ -24,7 +24,7 @@
                 <label for="kategori" class="block text-gray-700 font-bold mb-2">Kategori Olah :</label>
                 <select id="kategori" name="kategori" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                     <option value="">Pilih Kategori Olah:</option>
-                    <option value="Olah Raga">Olah Rasa</option>
+                    <option value="Olah Rasa">Olah Rasa</option>
                     <option value="Olah Pikir">Olah Pikir</option>
                     <option value="Olah Dzikir">Olah Dzikir</option>
                     <option value="Olah Raga">Olah Raga</option>
