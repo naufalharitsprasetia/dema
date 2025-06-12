@@ -18,11 +18,11 @@
             @csrf
             <div class="mb-4">
                 <label for="nama" class="block text-gray-700 font-bold mb-2">Nama UKM :</label>
-                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
+                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
             </div>
             <div class="mb-4">
                 <label for="kategori" class="block text-gray-700 font-bold mb-2">Kategori Olah :</label>
-                <select id="kategori" name="kategori" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <select id="kategori" name="kategori" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
                     <option value="">Pilih Kategori Olah:</option>
                     <option value="Olah Rasa">Olah Rasa</option>
                     <option value="Olah Pikir">Olah Pikir</option>
@@ -33,26 +33,26 @@
 
             <div class="mb-4">
                 <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi UKM :</label>
-                <input type="text" id="deskripsi" name="deskripsi" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('deskripsi') }}">
+                <input type="text" id="deskripsi" name="deskripsi" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('deskripsi') }}">
             </div>
 
             <div class="mb-4">
                 <label for="logo" class="block text-gray-700 font-bold mb-2">Logo UKM (Max:5MB):</label>
-                <input type="file" id="logo" name="logo" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="file" id="logo" name="logo" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
             </div>
 
             <div class="mb-4">
                 <label for="jumlah_anggota" class="block text-gray-700 font-bold mb-2">Jumlah Anggota UKM :</label>
-                <input type="text" id="jumlah_anggota" name="jumlah_anggota" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('jumlah_anggota') }}">
+                <input type="text" id="jumlah_anggota" name="jumlah_anggota" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('jumlah_anggota') }}">
             </div>
 
             <div class="mb-4">
                 <label for="link_sosmed" class="block text-gray-700 font-bold mb-2">Link Sosial Media :</label>
-                <input type="text" id="link_sosmed" name="link_sosmed" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('link_sosmed') }}">
+                <input type="text" id="link_sosmed" name="link_sosmed" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('link_sosmed') }}">
             </div>
 
             <div class="text-center">
-                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500">Tambahkan</button>
             </div>
         </form>
     </div>

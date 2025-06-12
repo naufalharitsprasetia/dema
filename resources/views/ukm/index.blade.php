@@ -1,35 +1,14 @@
 @extends('layout.main')
 
 @section('content')
-<style>
-    .aurora-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-    }
-
-    .aurora {
-        position: absolute;
-        width: 30rem;
-        height: 30rem;
-        background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
-        opacity: 0.2;
-        filter: blur(100px);
-        border-radius: 9999px;
-    }
-
-</style>
 {{-- ukm --}}
-<div class="ukm-section text-primary">
-    <div class="aurora-bg -z-10">
-        <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[20rem] right-[85%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[-10rem] left-[70%]"></div>
-    </div>
+<div class="ukm-section min-h-screen overflow-hidden relative isolate z-10 text-primary">
+    <x-efek.glowatas />
+    <x-efek.glowbawah />
     <div class="ukm max-w-7xl mx-auto pt-10 pb-14 px-10">
         <h1 class="text-5xl font-bold text-center mb-4">Unit Kegiatan Mahasiswa (UKM)</h1>
-        {{-- <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1> --}}
+        {{-- <h1 class="tulisan-gelap text-center fw-bolder">Unit Kegiatan Mahasiswa (UKM) - Unida Siman (Putra)</h1>
+        --}}
         <div class="penjelasan-ukm p-4">
             <h2 class="font-semibold text-3xl font-poppins"> APA ITU UKM ?</h2>
             <blockquote> Unit Kegiatan Mahasiswa (UKM) adalah organisasi mahasiswa santri yang dinaungi Dewan Mahasiswa
@@ -102,7 +81,8 @@
             <div class="ukm-card bg-secondary text-primary rounded-lg overflow-hidden max-w-xs">
                 <img src="{{ asset('storage/' . $ukm->logo) }}" class="w-full" alt="">
                 <h3 class="m-4">{{ $ukm->nama }}</h3>
-                <a href="/ukm/{{ $ukm->id }}" class="bg-primary text-secondary rounded-md flex text-center mx-4 mb-2 mt-5 px-3 py-2">Klik
+                <a href="/ukm/{{ $ukm->id }}"
+                    class="bg-primary text-secondary rounded-md flex text-center mx-4 mb-2 mt-5 px-3 py-2">Klik
                     Untuk
                     Selengkapnya</a>
             </div>

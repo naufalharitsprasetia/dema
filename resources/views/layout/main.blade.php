@@ -2,15 +2,13 @@
 @include('sweetalert::alert')
 @include('layout.navbar')
 @if ($active == 'beranda')
-<main class="main-screen">
+<main class="main-screen relative isolate">
     @elseif ($active == 'about')
-    <main class="main-screen">
+    <main class="main-screen relative isolate">
         @else
-        <main class="main-screen pt-[64px]">
+        <main class="main-screen pt-[64px] relative isolate">
             @endif
             @yield('content')
         </main>
-        <button onclick="topFunction()" id="myBtnTop" title="Go to top" style="display: block">
-            <i class="fa-solid fa-arrow-up fa-flip fa-xl" style="color: white;"></i>
-        </button>
+        <div class="before-footer relative isolate"></div>
         @include('layout.footer')

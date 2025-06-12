@@ -29,14 +29,14 @@
                     <label for="judul" class="block text-gray-700 font-bold mb-2">Judul (max 25 karakter termasuk
                         spasi):</label>
                     <input type="text" id="judul" name="judul"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                         value="{{ old('judul') }}" required maxlength="25">
                 </div>
 
                 <div class="mb-4">
                     <label for="image" class="block text-gray-700 font-bold mb-2">Gambar Utama (Max:5MB):</label>
                     <input type="file" id="image" name="image"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                         required>
                 </div>
 
@@ -58,13 +58,13 @@
                 <div class="mb-4">
                     <label for="link_dokumentasi" class="block text-gray-700 font-bold mb-2">Link Dokumentasi:</label>
                     <input type="text" id="link_dokumentasi" name="link_dokumentasi"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500"
                         value="{{ old('link_dokumentasi') }}">
                 </div>
 
                 <div class="text-center">
                     <button type="submit"
-                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                        class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500">Tambahkan</button>
                 </div>
             </form>
         </div>

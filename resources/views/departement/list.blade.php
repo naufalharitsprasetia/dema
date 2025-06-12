@@ -69,15 +69,15 @@
                                 <td class="py-2 px-4 border-b border-r ">
                                     <div class="flex">
                                         <a href="/departement/{{ $departement->id }}"
-                                            class="bg-blue-500 text-white px-2 py-1 text-sm rounded mr-2">Detail</a>
+                                            class="bg-blue-500 text-white px-2 py-1 text-sm rounded-sm mr-2">Detail</a>
                                         <a href="/departement-edit/{{ $departement->id }}"
-                                            class="bg-yellow-500 text-white px-2 py-1 text-sm rounded mr-2">Edit</a>
+                                            class="bg-yellow-500 text-white px-2 py-1 text-sm rounded-sm mr-2">Edit</a>
                                         <form action="/departement-delete/{{ $departement->id }}" method="POST"
                                             class="inline-block" id="formDelete-{{ $loop->iteration }}">
                                             @method('delete')
                                             @csrf
                                             <button type="button" onclick="deleteConfirm({{ $loop->iteration }})"
-                                                class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                                                class="bg-red-500 text-white px-2 py-1 rounded-sm">Delete</button>
                                         </form>
                                     </div>
                                 </td>

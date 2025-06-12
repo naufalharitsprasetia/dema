@@ -39,7 +39,7 @@
                         Email</label>
                     <div class="mt-2">
                         <input id="email" name="email" type="email" autocomplete="email" required
-                            class="block w-full rounded-md py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 @error('email')
+                            class="block w-full rounded-md py-1.5 px-2 text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 @error('email')
                                 input-wrong
                             @enderror  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6">
                         @error('email')
@@ -56,7 +56,7 @@
                     </div>
                     <div class="mt-2">
                         <input id="password" name="password" type="password" autocomplete="current-password" required
-                            class="form-input block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 @error('password')
+                            class="form-input block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-xs ring-1 ring-inset ring-gray-300 @error('password')
                                 input-wrong
                             @enderror placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:yellow-indigo-600 sm:text-sm sm:leading-6">
                         @error('password')
@@ -69,7 +69,7 @@
 
                 <div>
                     <button type="submit"
-                        class="flex w-full justify-center rounded-md bg-secondary px-3 py-1.5 text-sm font-semibold leading-6 text-primary shadow-sm hover:bg-cyan-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">Masuk</button>
+                        class="flex w-full justify-center rounded-md bg-secondary px-3 py-1.5 text-sm font-semibold leading-6 text-primary shadow-xs hover:bg-cyan-400 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">Masuk</button>
                 </div>
             </form>
         </div>

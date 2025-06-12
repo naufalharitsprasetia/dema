@@ -33,7 +33,7 @@
             <div class="faqs-group mt-4">
                 @foreach ($faqs as $index => $faq)
                     <div class="faq-item my-3 bg-white rounded-lg border border-gray-200 overflow-hidden">
-                        <button class="faq-question w-full text-left px-6 py-4 focus:outline-none"
+                        <button class="faq-question w-full text-left px-6 py-4 focus:outline-hidden"
                             onclick="toggleFaq({{ $index }})">
                             <div class="flex justify-between items-center">
                                 <span class="font-medium text-gray-900 ">{{ $faq['question'] }}</span>

@@ -1,10 +1,10 @@
 <nav class="z-50 w-full fixed transition ease-in-out" id="myNavbar">
     {{-- sebenernya ada add remove bg-secondary/70 di .js nya --}}
-    <div class="bg-white/80 backdrop-blur hidden"></div>
+    <div class="bg-white/80 backdrop-blur-sm hidden"></div>
     <div class="mx-auto max-w-7xl px-2 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
             <div class="flex md:flex-1 mx-auto md:mx-0 items-center justify-center lg:items-stretch lg:justify-start">
-                <div class="flex flex-shrink-0 items-center md:ml-28">
+                <div class="flex shrink-0 items-center md:ml-28">
                     <img src="/img/logodema.png" alt="Logo Dema" class="w-10">
                     <h2 class="mx-3 md:mx-4 text-black font-jakarta font-semibold text-base md:text-lg">DEMA UNIDA
                         GONTOR
@@ -27,7 +27,7 @@
                 <div class="-mr-2 flex lg:hidden justify-end">
                     <!-- Mobile menu button -->
                     <button type="button"
-                        class="relative inline-flex items-center justify-center my-3 rounded-md bg-slate-100 p-2 text-gray-800 hover:bg-slate-200 hover:text-slate-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        class="relative inline-flex items-center justify-center my-3 rounded-md bg-slate-100 p-2 text-gray-800 hover:bg-slate-200 hover:text-slate-700 focus:outline-hidden focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                         aria-controls="mobile-menu" aria-expanded="false">
                         <span class="absolute -inset-0.5" id="mobile-hamburger"></span>
                         <span class="sr-only">Open main menu</span>
@@ -53,7 +53,7 @@
                 <div class="relative ml-3">
                     <div>
                         <button type="button"
-                            class="relative flex max-w-xs items-center rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-dema focus:ring-offset-2 focus:ring-offset-dema hover:text-dema group"
+                            class="relative flex max-w-xs items-center rounded-md text-sm focus:outline-hidden focus:ring-2 focus:ring-dema focus:ring-offset-2 focus:ring-offset-dema hover:text-dema group"
                             aria-expanded="false" aria-haspopup="true">
                             <span class="absolute -inset-1.5" id="user-menu-button"></span>
                             <span class="sr-only">Open user menu</span>
@@ -61,7 +61,7 @@
                         </button>
                     </div>
                     <!-- Dropdown menu *(lainnya) -->
-                    <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+                    <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-hidden hidden"
                         role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
                         {{-- lainnya --}}
                         <a href="/about"
@@ -95,7 +95,7 @@
 
     <!-- Mobile menu, show/hide based on menu state. -->
     {{-- Dropdown small nav --}}
-    <div class="lg:hidden hidden absolute bg-gray-100 z-60 w-[80%] right-0 mx-[1rem] rounded-md shadow-xl"
+    <div class="lg:hidden hidden absolute bg-gray-100 z-60 w-[80%] right-0 mx-4 rounded-md shadow-xl"
         id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2 lg:px-3">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -116,7 +116,7 @@
         @auth
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
-                <div class="flex-shrink-0">
+                <div class="shrink-0">
                     <img class="h-10 w-10 rounded-full" src="/img/avatar.jpg" alt="">
                 </div>
                 <div class="ml-3">

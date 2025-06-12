@@ -1,30 +1,11 @@
 @extends('layout.main')
 
 @section('content')
-<style>
-    .aurora-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-    }
-
-    .aurora {
-        position: absolute;
-        width: 30rem;
-        height: 30rem;
-        background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
-        opacity: 0.2;
-        filter: blur(100px);
-        border-radius: 9999px;
-    }
-</style>
 {{-- Hero Section --}}
-<div class="min-h-svh flex justify-center items-center relative isolate z-10">
-    {{-- Aurora --}}
+<div class="min-h-svh flex min-h-screen overflow-hidden justify-center items-center relative isolate z-10">
+
     <x-efek.glowatas />
     <x-efek.glowbawah />
-    {{-- End Aurora --}}
 
     {{-- main Content --}}
     <div class="text-center flex flex-col justify-center items-center text-dema p-3 md:p-8 z-20">
@@ -32,7 +13,7 @@
             <img class="w-44 md:w-52" src="/img/logodema.png" alt="">
         </div>
         {{-- <span class="mt-6 uppercase text-sm">Website Resmi</span> --}}
-        <h1 class="mt-3 md:mt-6 font-jakarta font-[800] uppercase text-3xl md:text-5xl"
+        <h1 class="mt-3 md:mt-6 font-jakarta font-extrabold uppercase text-3xl md:text-5xl"
             style="text-shadow: 0px 0px 12px rgb(85 241 255);letter-spacing: 5.76px;line-height: 96.965%;">
             Dewan
             <br>Mahasiswa
@@ -54,8 +35,8 @@
 {{-- Tentang Dema Section --}}
 <div class="about-section bg-primary">
     <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16 text-secondary">
-        <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
-            <img class="w-[150rem]" src="/img/logodema.png" alt="" loading="lazy">
+        <div class="logo-about w-full w-600 flex items-center justify-center px-10">
+            <img class="w-600" src="/img/logodema.png" alt="" loading="lazy">
         </div>
         <div class="text-about">
             <h2 class="font-bold text-[50px] text-center mb-8">Tentang DEMA</h2>

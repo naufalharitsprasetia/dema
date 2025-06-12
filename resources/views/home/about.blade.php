@@ -4,13 +4,13 @@
     {{-- Hero Section (ABOUT US) --}}
     <div class="min-h-svh bg-center flex justify-center items-center"
         style="background-image: url('/img/unidabg.jpg'); background-size: cover; background-repeat: no-repeat">
-        <img class="w-[34rem]" src="/img/abouthadisatya.png" alt="">
+        <img class="w-136" src="/img/abouthadisatya.png" alt="">
     </div>
     {{-- Tentang Dema Section --}}
     <div class="about-section bg-gray-50 text-primary">
         <div class="about flex flex-col lg:flex-row max-w-7xl mx-auto px-12 py-16">
-            <div class="logo-about w-full w-[150rem] flex items-center justify-center px-10">
-                <img class="w-[150rem]" src="/img/logodema.png" alt="">
+            <div class="logo-about w-full w-600 flex items-center justify-center px-10">
+                <img class="w-600" src="/img/logodema.png" alt="">
             </div>
             <div class="text-about">
                 <h2 class="font-bold text-[50px] text-center mb-8">Tentang DEMA</h2>

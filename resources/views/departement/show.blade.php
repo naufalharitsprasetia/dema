@@ -23,31 +23,11 @@
     .group:hover .card-inner {
         transform: rotateY(180deg);
     }
-
-    .aurora-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-    }
-
-    .aurora {
-        position: absolute;
-        width: 30rem;
-        height: 30rem;
-        background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
-        opacity: 0.2;
-        filter: blur(100px);
-        border-radius: 9999px;
-    }
 </style>
 {{-- Departement --}}
-<div class="departement-section text-primary">
-    <div class="aurora-bg -z-10">
-        <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[20rem] right-[85%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[-10rem] left-[70%]"></div>
-    </div>
+<div class="departement-section min-h-screen overflow-hidden text-primary relative isolate z-10">
+    <x-efek.glowatas />
+    <x-efek.glowbawah />
     <div class="departement max-w-7xl mx-auto py-16 px-10">
         <h1 class="text-5xl font-bold text-center mb-4">{{ $departement->nama }}</h1>
 

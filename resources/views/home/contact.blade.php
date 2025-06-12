@@ -1,32 +1,11 @@
 @extends('layout.main')
 
 @section('content')
-<style>
-    .aurora-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-    }
 
-    .aurora {
-        position: absolute;
-        width: 30rem;
-        height: 30rem;
-        background: radial-gradient(circle, var(--tw-gradient-from), var(--tw-gradient-to));
-        opacity: 0.2;
-        filter: blur(100px);
-        border-radius: 9999px;
-    }
-
-</style>
 {{-- contact Us --}}
-<div class="contact-section text-primary">
-    <div class="aurora-bg -z-10">
-        <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[20rem] right-[85%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[-10rem] left-[70%]"></div>
-    </div>
+<div class="contact-section min-h-screen overflow-hidden text-primary relative isolate z-10">
+    <x-efek.glowatas />
+    <x-efek.glowbawah />
     <div class="contact max-w-7xl mx-auto py-16 px-14 flex flex-col md:flex-row">
         <div class="kiri-contact w-full">
             <h2 class="text-4xl font-bold mb-4">Kontak Kami</h2>
@@ -56,16 +35,19 @@
                 <div class="input-group flex">
                     <div class="flex flex-col input-div w-full">
                         <label for="nama" class="font-semibold">Nama</label>
-                        <input type="text" name="nama" id="nama" class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Nama Lengkap">
+                        <input type="text" name="nama" id="nama"
+                            class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Nama Lengkap">
                     </div>
                     <div class="flex flex-col input-div w-full ml-4">
                         <label for="email" class="font-semibold">Email</label>
-                        <input type="email" name="email" id="email" class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Alamat Email">
+                        <input type="email" name="email" id="email"
+                            class="p-2 w-full border-2 border-primary bg-gray-50 rounded-md" placeholder="Alamat Email">
                     </div>
                 </div>
                 <div class="flex flex-col input-pesan mt-2">
                     <label for="pesan" class="font-semibold">Pesan</label>
-                    <textarea class="p-2 border-2 border-primary bg-gray-50 rounded-md" name="pesan" id="pesan" cols="30" rows="10" placeholder="Pesan yang ingin disampaikan"></textarea>
+                    <textarea class="p-2 border-2 border-primary bg-gray-50 rounded-md" name="pesan" id="pesan"
+                        cols="30" rows="10" placeholder="Pesan yang ingin disampaikan"></textarea>
                 </div>
                 <button type="submit" class="text-white bg-sixth px-4 py-2 font-semibold text-xl mt-4 rounded-lg">Kirim
                     Pesan</button>

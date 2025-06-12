@@ -1,64 +1,82 @@
 /** @format */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@source "../views";
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
 }
 @font-face {
-  font-family: "arabic-lpmq";
-  src: url("/fonts/LPMQIsepMisbah.ttf");
+    font-family: "arabic-lpmq";
+    src: url("/fonts/LPMQIsepMisbah.ttf");
 }
 @font-face {
-  font-family: "estetik";
-  src: url("/fonts/esthetique.otf");
+    font-family: "estetik";
+    src: url("/fonts/esthetique.otf");
 }
 @font-face {
-  font-family: "trajan";
-  src: url("/fonts/TrajanPro-Regular.ttf");
+    font-family: "trajan";
+    src: url("/fonts/TrajanPro-Regular.ttf");
 }
 @font-face {
-  font-family: "trajan-bold";
-  src: url("/fonts/TrajanPro-Bold.otf");
+    font-family: "trajan-bold";
+    src: url("/fonts/TrajanPro-Bold.otf");
+}
+
+@theme {
+    --color-primary: #04364a;
+    --color-secondary: #bbe1fa;
+    --color-third: #3282b8;
+    --color-fourth: #0365a8;
+    --color-fifth: #01131e;
+    --color-sixth: #ff6614;
+    --color-seventh: #77fff6;
+    --color-dema: #16aebc;
+    --font-arabic: "arabic-lpmq";
+    --font-estetik: "estetik";
+    --font-trajan: "trajan";
+    --font-trajanBold: "trajan-bold";
+    --font-poppins: "Poppins";
+    --font-montserrat: "Montserrat";
+    --font-montaga: "Montaga";
+    --font-jakarta: "Plus Jakarta Sans";
 }
 
 #myBtnTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  @apply bg-third;
-  color: white;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  /* padding: 10px 15px; */
-  border-radius: 10px;
-  animation: flutuar 2.5s linear infinite;
-  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    @apply bg-third;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    /* padding: 10px 15px; */
+    border-radius: 10px;
+    animation: flutuar 2.5s linear infinite;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
 }
 
 .alert-success {
-  @apply bg-green-200 rounded-lg mx-2 py-2 px-3 text-slate-900 ring-2 ring-inset ring-green-500 my-3;
+    @apply bg-green-200 rounded-lg mx-2 py-2 px-3 text-slate-900 ring-2 ring-inset ring-green-500 my-3;
 }
 .alert-error {
-  @apply bg-rose-400 rounded-lg mx-2 py-2 px-3 text-white ring-2 ring-inset ring-rose-700 my-3;
+    @apply bg-rose-400 rounded-lg mx-2 py-2 px-3 text-white ring-2 ring-inset ring-rose-700 my-3;
 }
 .input-wrong {
-  @apply border-2 border-rose-500;
+    @apply border-2 border-rose-500;
 }
 .label-error {
-  @apply text-sm font-semibold p-2 text-rose-500;
+    @apply text-sm font-semibold p-2 text-rose-500;
 }

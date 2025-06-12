@@ -27,9 +27,9 @@
                     </div>
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/blog-create" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 block">Buat
+                    <a href="/blog-create" class="bg-blue-500 text-white px-4 py-2 rounded-sm hover:bg-blue-700 block">Buat
                         Artikel Baru</a>
-                    <a href="/blog-list" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                    <a href="/blog-list" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded-sm block">List
                         Artikel</a>
                 </div>
             </div>
@@ -51,9 +51,9 @@
                     </div>
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/divisi-create" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 block">Buat
+                    <a href="/divisi-create" class="bg-red-500 text-white px-4 py-2 rounded-sm hover:bg-red-700 block">Buat
                         Divisi Baru</a>
-                    <a href="/divisi" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                    <a href="/divisi" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded-sm block">List
                         Divisi</a>
                 </div>
             </div>
@@ -76,10 +76,10 @@
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
                     <a href="/departement-create"
-                        class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 block">Buat
+                        class="bg-green-500 text-white px-4 py-2 rounded-sm hover:bg-green-700 block">Buat
                         Departement Baru</a>
                     <a href="/departement-list"
-                        class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                        class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded-sm block">List
                         Departements</a>
                 </div>
             </div>
@@ -102,10 +102,10 @@
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
                     <a href="/anggota_departement-create"
-                        class="bg-violet-500 text-white px-4 py-2 rounded hover:bg-violet-700 block">Buat
+                        class="bg-violet-500 text-white px-4 py-2 rounded-sm hover:bg-violet-700 block">Buat
                         Anggota Departement Baru</a>
                     <a href="/anggota_departement"
-                        class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                        class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded-sm block">List
                         Anggota Departement</a>
                 </div>
             </div>
@@ -127,9 +127,9 @@
                     </div>
                 </div>
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <a href="/ukm-create" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-700 block">Buat
+                    <a href="/ukm-create" class="bg-yellow-500 text-white px-4 py-2 rounded-sm hover:bg-yellow-700 block">Buat
                         UKM Baru</a>
-                    <a href="/ukm-list" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded block">List
+                    <a href="/ukm-list" class="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded-sm block">List
                         UKM</a>
                 </div>
             </div>

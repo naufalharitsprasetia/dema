@@ -18,15 +18,15 @@
             @csrf
             <div class="mb-4">
                 <label for="nim" class="block text-gray-700 font-bold mb-2">NIM :</label>
-                <input type="text" id="nim" name="nim" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
+                <input type="text" id="nim" name="nim" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
             </div>
             <div class="mb-4">
                 <label for="nama" class="block text-gray-700 font-bold mb-2">Nama Lengkap :</label>
-                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
+                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
             </div>
             <div class="mb-4">
                 <label for="departement_id" class="block text-gray-700 font-bold mb-2">Departement :</label>
-                <select id="departement_id" name="departement_id" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <select id="departement_id" name="departement_id" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
                     <option value="">Pilih Departement</option>
                     @foreach ($departements as $departement)
                     <option value="{{ $departement->id }}">{{ $departement->nama }}
@@ -36,26 +36,26 @@
             </div>
             <div class="mb-4">
                 <label for="urutan" class="block text-gray-700 font-bold mb-2">Urutan :</label>
-                <input type="number" id="urutan" name="urutan" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('urutan') }}" required>
+                <input type="number" id="urutan" name="urutan" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('urutan') }}" required>
             </div>
 
             <div class="mb-4">
                 <label for="prodi" class="block text-gray-700 font-bold mb-2">Program Studi :</label>
-                <input type="text" id="prodi" name="prodi" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('prodi') }}">
+                <input type="text" id="prodi" name="prodi" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('prodi') }}">
             </div>
 
             <div class="mb-4">
                 <label for="asal" class="block text-gray-700 font-bold mb-2">Asal Daerah (optional) :</label>
-                <input type="text" id="asal" name="asal" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('asal') }}">
+                <input type="text" id="asal" name="asal" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('asal') }}">
             </div>
 
             <div class="mb-4">
                 <label for="image" class="block text-gray-700 font-bold mb-2">Foto Potrait (Max:5MB):</label>
-                <input type="file" id="image" name="image" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="file" id="image" name="image" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
             </div>
 
             <div class="text-center">
-                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500">Tambahkan</button>
             </div>
         </form>
     </div>

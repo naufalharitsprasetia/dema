@@ -18,11 +18,11 @@
             @csrf
             <div class="mb-4">
                 <label for="nama" class="block text-gray-700 font-bold mb-2">Nama Departement :</label>
-                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
+                <input type="text" id="nama" name="nama" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('nama') }}" required>
             </div>
             <div class="mb-4">
                 <label for="division_id" class="block text-gray-700 font-bold mb-2">Divisi :</label>
-                <select id="division_id" name="division_id" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <select id="division_id" name="division_id" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
                     <option value="">Pilih Divisi</option>
                     @foreach ($divisions as $division)
                     <option value="{{ $division->id }}">{{ $division->nama }}
@@ -32,25 +32,25 @@
             </div>
             <div class="mb-4">
                 <label for="urutan" class="block text-gray-700 font-bold mb-2">Urutan :</label>
-                <input type="number" id="urutan" name="urutan" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('urutan') }}" required>
+                <input type="number" id="urutan" name="urutan" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('urutan') }}" required>
             </div>
 
             <div class="mb-4">
                 <label for="deskripsi" class="block text-gray-700 font-bold mb-2">Deskripsi Departement :</label>
-                <input type="text" id="deskripsi" name="deskripsi" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('deskripsi') }}">
+                <input type="text" id="deskripsi" name="deskripsi" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('deskripsi') }}">
             </div>
 
             <div class="mb-4">
                 <label for="singkatan" class="block text-gray-700 font-bold mb-2">Singkatan :</label>
-                <input type="text" id="singkatan" name="singkatan" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value="{{ old('singkatan') }}">
+                <input type="text" id="singkatan" name="singkatan" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" value="{{ old('singkatan') }}">
             </div>
             <div class="mb-4">
                 <label for="image" class="block text-gray-700 font-bold mb-2">Foto (Max:5MB):</label>
-                <input type="file" id="image" name="image" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <input type="file" id="image" name="image" class="w-full px-3 py-2 border rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500" required>
             </div>
 
             <div class="text-center">
-                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Tambahkan</button>
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500">Tambahkan</button>
             </div>
         </form>
     </div>

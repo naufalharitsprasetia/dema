@@ -29,7 +29,7 @@
             <form action="">
                 <label for="perPageB" class="mr-2">Menampilkan</label>
                 <select id="perPageB" name="perPageB" onchange="this.form.submit()"
-                    class="border border-gray-300 rounded form-select">
+                    class="border border-gray-300 rounded-sm form-select">
                     <option value="5" {{ Request::get('perPageB') == 5 ? 'selected' : '' }}>5</option>
                     <option value="10" {{ Request::get('perPageB') == 10 ? 'selected' : '' }}>10</option>
                     <option value="25" {{ Request::get('perPageB') == 25 ? 'selected' : '' }}>25</option>
@@ -46,7 +46,7 @@
         <div class="table-blog overflow-x-auto rounded-md bg-slate-200 px-4 py-3">
             <div class="mb-4">
                 <input type="text" id="search" placeholder="Cari blog..."
-                    class="border border-gray-300 rounded p-2 w-full" onkeyup="searchblog()">
+                    class="border border-gray-300 rounded-sm p-2 w-full" onkeyup="searchblog()">
             </div>
 
             <table class="min-w-full text-sm md:text-base bg-white border border-gray-300">
@@ -78,15 +78,15 @@
                                 <td class="py-2 px-4 border-b border-r ">
                                     <div class="flex">
                                         <a href="/blog/{{ $blog->id }}"
-                                            class="bg-blue-500 text-white px-2 py-1 text-sm rounded mr-2">Detail</a>
+                                            class="bg-blue-500 text-white px-2 py-1 text-sm rounded-sm mr-2">Detail</a>
                                         <a href="/blog-edit/{{ $blog->id }}"
-                                            class="bg-yellow-500 text-white px-2 py-1 text-sm rounded mr-2">Edit</a>
+                                            class="bg-yellow-500 text-white px-2 py-1 text-sm rounded-sm mr-2">Edit</a>
                                         <form action="/blog-delete/{{ $blog->id }}" method="POST" class="inline-block"
                                             id="formDelete-{{ $loop->iteration }}">
                                             @method('delete')
                                             @csrf
                                             <button type="button" onclick="deleteConfirm({{ $loop->iteration }})"
-                                                class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                                                class="bg-red-500 text-white px-2 py-1 rounded-sm">Delete</button>
                                         </form>
                                     </div>
                                 </td>
