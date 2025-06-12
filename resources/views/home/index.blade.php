@@ -20,13 +20,10 @@
     }
 </style>
 {{-- Hero Section --}}
-<div class="min-h-svh flex justify-center items-center">
+<div class="min-h-svh flex justify-center items-center relative isolate z-10">
     {{-- Aurora --}}
-    <div class="aurora-bg -z-10">
-        <div class="aurora aurora-green from-dema/65 to-dema/35 top-[-10rem] left-[20%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[20rem] right-[85%]"></div>
-        <div class="aurora aurora-green from-dema/65 to-dema/35 bottom-[-10rem] left-[70%]"></div>
-    </div>
+    <x-efek.glowatas />
+    <x-efek.glowbawah />
     {{-- End Aurora --}}
 
     {{-- main Content --}}
